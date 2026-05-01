@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@mondaydotcomorg/monday-api-mcp",
+  "title": "Monday.com",
+  "description": "Monday.com boards, workflows, items, and resources via the API.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/mondaycom/mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/mondaycom/mcp/tree/HEAD/packages/monday-api-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-mondaycom",
+      "icon": "mondaycom",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "boards / items / workflows",
+          "description": "Access boards, items, and operational resources in Monday.com workspaces."
+        }
+      ],
+      "about": "Official Monday.com MCP package for workspace operations through API-backed boards and workflow entities.",
+      "vendorLabel": "Monday.com"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-mondaycom\": {\n      \"command\": \"npx\",\n      \"args\": [\"@mondaydotcomorg/monday-api-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@mondaydotcomorg/monday-api-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "monday_token",
+          "description": "Monday.com API token.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

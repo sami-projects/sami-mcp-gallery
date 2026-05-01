@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-server-sentry",
+  "title": "Sentry",
+  "description": "Errors, stack traces, releases, and issue triage in Sentry.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sentry",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sentry",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-sentry",
+      "icon": "sentry",
+      "iconBg": "#FFFFFF",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "issues / releases",
+          "description": "Inspect issues, stack traces, and releases for triage and debugging context."
+        }
+      ],
+      "about": "Archived MCP server that connects agents to Sentry issue and release data using an auth token.",
+      "vendorLabel": "Sentry"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-sentry\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-sentry\", \"--auth-token\", \"${YOUR_SENTRY_TOKEN}\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-server-sentry",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

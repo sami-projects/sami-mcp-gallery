@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-hubspot-external",
+  "title": "HubSpot",
+  "subtitle": "external",
+  "description": "HubSpot CRM: contacts, companies, deals, tickets, and pipeline data.",
+  "version": "0.1.0",
+  "websiteUrl": "https://smithery.ai/servers/hubspot",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-hubspot-external",
+      "icon": "hubspot",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "contacts / deals / pipelines",
+          "description": "Work with HubSpot CRM entities and pipeline data through an external MCP endpoint."
+        }
+      ],
+      "about": "External hosted HubSpot MCP endpoint for CRM workflows around contacts, companies, deals, and tickets.",
+      "vendorLabel": "HubSpot"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-hubspot-external\": {\n      \"url\": \"https://hubspot.run.tools\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://hubspot.run.tools"
+    }
+  ]
+}

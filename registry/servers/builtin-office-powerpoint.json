@@ -1,0 +1,55 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/office-powerpoint-mcp-server",
+  "title": "Office PowerPoint",
+  "description": "Create and edit PowerPoint decks: slides, layouts, text, images, tables, and shapes.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/gongrzhe/office-powerpoint-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/gongrzhe/office-powerpoint-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-office-powerpoint",
+      "icon": "powerpoint",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "create_presentation",
+          "description": "Create a new presentation and initialize metadata."
+        },
+        {
+          "name": "add_slide / populate_placeholder",
+          "description": "Create slides and fill structured content placeholders."
+        },
+        {
+          "name": "manage_text / manage_image",
+          "description": "Unified tools for text formatting and image operations."
+        },
+        {
+          "name": "add_chart / add_table / add_shape",
+          "description": "Build visual slides with charts, tables, and shapes."
+        }
+      ],
+      "about": "Office PowerPoint MCP provides end-to-end .pptx automation: presentations, slide templates, text/image management, charts, tables, and professional design operations.",
+      "vendorLabel": "Office PowerPoint MCP Server"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-office-powerpoint\": {\n      \"command\": \"uvx\",\n      \"args\": [\"--from\", \"office-powerpoint-mcp-server\", \"ppt_mcp_server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "office-powerpoint-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

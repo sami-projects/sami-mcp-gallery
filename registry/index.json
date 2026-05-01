@@ -1,0 +1,405 @@
+{
+  "version": "1",
+  "servers": [
+    {
+      "id": "builtin-agentmail-oauth",
+      "path": "registry/servers/builtin-agentmail-oauth.json"
+    },
+    {
+      "id": "builtin-ahrefs-oauth",
+      "path": "registry/servers/builtin-ahrefs-oauth.json"
+    },
+    {
+      "id": "builtin-airtable",
+      "path": "registry/servers/builtin-airtable.json"
+    },
+    {
+      "id": "builtin-amplitude-oauth",
+      "path": "registry/servers/builtin-amplitude-oauth.json"
+    },
+    {
+      "id": "builtin-apify-oauth",
+      "path": "registry/servers/builtin-apify-oauth.json"
+    },
+    {
+      "id": "builtin-arxiv-search",
+      "path": "registry/servers/builtin-arxiv-search.json"
+    },
+    {
+      "id": "builtin-asana",
+      "path": "registry/servers/builtin-asana.json"
+    },
+    {
+      "id": "builtin-asana-oauth",
+      "path": "registry/servers/builtin-asana-oauth.json"
+    },
+    {
+      "id": "builtin-atlassian",
+      "path": "registry/servers/builtin-atlassian.json"
+    },
+    {
+      "id": "builtin-aws-documentation",
+      "path": "registry/servers/builtin-aws-documentation.json"
+    },
+    {
+      "id": "builtin-brave",
+      "path": "registry/servers/builtin-brave.json"
+    },
+    {
+      "id": "builtin-calculator",
+      "path": "registry/servers/builtin-calculator.json"
+    },
+    {
+      "id": "builtin-chart-generator",
+      "path": "registry/servers/builtin-chart-generator.json"
+    },
+    {
+      "id": "builtin-chroma",
+      "path": "registry/servers/builtin-chroma.json"
+    },
+    {
+      "id": "builtin-chrome-devtools",
+      "path": "registry/servers/builtin-chrome-devtools.json"
+    },
+    {
+      "id": "builtin-cli-sequre",
+      "path": "registry/servers/builtin-cli-sequre.json"
+    },
+    {
+      "id": "builtin-clickup-oauth",
+      "path": "registry/servers/builtin-clickup-oauth.json"
+    },
+    {
+      "id": "builtin-context7",
+      "path": "registry/servers/builtin-context7.json"
+    },
+    {
+      "id": "builtin-desktop-commander",
+      "path": "registry/servers/builtin-desktop-commander.json"
+    },
+    {
+      "id": "builtin-discord",
+      "path": "registry/servers/builtin-discord.json"
+    },
+    {
+      "id": "builtin-duckdb",
+      "path": "registry/servers/builtin-duckdb.json"
+    },
+    {
+      "id": "builtin-duckduckgo",
+      "path": "registry/servers/builtin-duckduckgo.json"
+    },
+    {
+      "id": "builtin-exa",
+      "path": "registry/servers/builtin-exa.json"
+    },
+    {
+      "id": "builtin-fetch",
+      "path": "registry/servers/builtin-fetch.json"
+    },
+    {
+      "id": "builtin-figma",
+      "path": "registry/servers/builtin-figma.json"
+    },
+    {
+      "id": "builtin-filesystem",
+      "path": "registry/servers/builtin-filesystem.json"
+    },
+    {
+      "id": "builtin-financial-datasets",
+      "path": "registry/servers/builtin-financial-datasets.json"
+    },
+    {
+      "id": "builtin-firecrawl",
+      "path": "registry/servers/builtin-firecrawl.json"
+    },
+    {
+      "id": "builtin-format-converter",
+      "path": "registry/servers/builtin-format-converter.json"
+    },
+    {
+      "id": "builtin-github",
+      "path": "registry/servers/builtin-github.json"
+    },
+    {
+      "id": "builtin-gitmcp",
+      "path": "registry/servers/builtin-gitmcp.json"
+    },
+    {
+      "id": "builtin-gmail",
+      "path": "registry/servers/builtin-gmail.json"
+    },
+    {
+      "id": "builtin-gmail-external",
+      "path": "registry/servers/builtin-gmail-external.json"
+    },
+    {
+      "id": "builtin-google-analytics",
+      "path": "registry/servers/builtin-google-analytics.json"
+    },
+    {
+      "id": "builtin-google-analytics-external",
+      "path": "registry/servers/builtin-google-analytics-external.json"
+    },
+    {
+      "id": "builtin-google-maps",
+      "path": "registry/servers/builtin-google-maps.json"
+    },
+    {
+      "id": "builtin-google-sheets",
+      "path": "registry/servers/builtin-google-sheets.json"
+    },
+    {
+      "id": "builtin-hubspot-external",
+      "path": "registry/servers/builtin-hubspot-external.json"
+    },
+    {
+      "id": "builtin-huggingface-oauth",
+      "path": "registry/servers/builtin-huggingface-oauth.json"
+    },
+    {
+      "id": "builtin-instagram-external",
+      "path": "registry/servers/builtin-instagram-external.json"
+    },
+    {
+      "id": "builtin-kaggle",
+      "path": "registry/servers/builtin-kaggle.json"
+    },
+    {
+      "id": "builtin-linear",
+      "path": "registry/servers/builtin-linear.json"
+    },
+    {
+      "id": "builtin-linear-oauth",
+      "path": "registry/servers/builtin-linear-oauth.json"
+    },
+    {
+      "id": "builtin-mailserver",
+      "path": "registry/servers/builtin-mailserver.json"
+    },
+    {
+      "id": "builtin-markdown-to-pdf",
+      "path": "registry/servers/builtin-markdown-to-pdf.json"
+    },
+    {
+      "id": "builtin-markitdown",
+      "path": "registry/servers/builtin-markitdown.json"
+    },
+    {
+      "id": "builtin-memory",
+      "path": "registry/servers/builtin-memory.json"
+    },
+    {
+      "id": "builtin-mixpanel-oauth",
+      "path": "registry/servers/builtin-mixpanel-oauth.json"
+    },
+    {
+      "id": "builtin-mondaycom",
+      "path": "registry/servers/builtin-mondaycom.json"
+    },
+    {
+      "id": "builtin-mongodb",
+      "path": "registry/servers/builtin-mongodb.json"
+    },
+    {
+      "id": "builtin-n8n",
+      "path": "registry/servers/builtin-n8n.json"
+    },
+    {
+      "id": "builtin-needle",
+      "path": "registry/servers/builtin-needle.json"
+    },
+    {
+      "id": "builtin-neon",
+      "path": "registry/servers/builtin-neon.json"
+    },
+    {
+      "id": "builtin-neon-oauth",
+      "path": "registry/servers/builtin-neon-oauth.json"
+    },
+    {
+      "id": "builtin-notion",
+      "path": "registry/servers/builtin-notion.json"
+    },
+    {
+      "id": "builtin-notion-oauth",
+      "path": "registry/servers/builtin-notion-oauth.json"
+    },
+    {
+      "id": "builtin-obsidian",
+      "path": "registry/servers/builtin-obsidian.json"
+    },
+    {
+      "id": "builtin-odoo",
+      "path": "registry/servers/builtin-odoo.json"
+    },
+    {
+      "id": "builtin-office-excel",
+      "path": "registry/servers/builtin-office-excel.json"
+    },
+    {
+      "id": "builtin-office-powerpoint",
+      "path": "registry/servers/builtin-office-powerpoint.json"
+    },
+    {
+      "id": "builtin-office-word",
+      "path": "registry/servers/builtin-office-word.json"
+    },
+    {
+      "id": "builtin-openbrand",
+      "path": "registry/servers/builtin-openbrand.json"
+    },
+    {
+      "id": "builtin-openstreetmap",
+      "path": "registry/servers/builtin-openstreetmap.json"
+    },
+    {
+      "id": "builtin-paper-search",
+      "path": "registry/servers/builtin-paper-search.json"
+    },
+    {
+      "id": "builtin-pdf-reader",
+      "path": "registry/servers/builtin-pdf-reader.json"
+    },
+    {
+      "id": "builtin-perplexity",
+      "path": "registry/servers/builtin-perplexity.json"
+    },
+    {
+      "id": "builtin-playwright",
+      "path": "registry/servers/builtin-playwright.json"
+    },
+    {
+      "id": "builtin-postgres",
+      "path": "registry/servers/builtin-postgres.json"
+    },
+    {
+      "id": "builtin-postgres-pro",
+      "path": "registry/servers/builtin-postgres-pro.json"
+    },
+    {
+      "id": "builtin-posthog-oauth",
+      "path": "registry/servers/builtin-posthog-oauth.json"
+    },
+    {
+      "id": "builtin-postman",
+      "path": "registry/servers/builtin-postman.json"
+    },
+    {
+      "id": "builtin-postman-oauth",
+      "path": "registry/servers/builtin-postman-oauth.json"
+    },
+    {
+      "id": "builtin-prisma-oauth",
+      "path": "registry/servers/builtin-prisma-oauth.json"
+    },
+    {
+      "id": "builtin-puppeteer",
+      "path": "registry/servers/builtin-puppeteer.json"
+    },
+    {
+      "id": "builtin-quickchart",
+      "path": "registry/servers/builtin-quickchart.json"
+    },
+    {
+      "id": "builtin-railway",
+      "path": "registry/servers/builtin-railway.json"
+    },
+    {
+      "id": "builtin-reddit",
+      "path": "registry/servers/builtin-reddit.json"
+    },
+    {
+      "id": "builtin-reddit-external",
+      "path": "registry/servers/builtin-reddit-external.json"
+    },
+    {
+      "id": "builtin-resend",
+      "path": "registry/servers/builtin-resend.json"
+    },
+    {
+      "id": "builtin-searchcode",
+      "path": "registry/servers/builtin-searchcode.json"
+    },
+    {
+      "id": "builtin-searxng",
+      "path": "registry/servers/builtin-searxng.json"
+    },
+    {
+      "id": "builtin-semrush-oauth",
+      "path": "registry/servers/builtin-semrush-oauth.json"
+    },
+    {
+      "id": "builtin-sentry",
+      "path": "registry/servers/builtin-sentry.json"
+    },
+    {
+      "id": "builtin-sentry-oauth",
+      "path": "registry/servers/builtin-sentry-oauth.json"
+    },
+    {
+      "id": "builtin-sequential-thinking",
+      "path": "registry/servers/builtin-sequential-thinking.json"
+    },
+    {
+      "id": "builtin-slack",
+      "path": "registry/servers/builtin-slack.json"
+    },
+    {
+      "id": "builtin-sqlite",
+      "path": "registry/servers/builtin-sqlite.json"
+    },
+    {
+      "id": "builtin-statsig-oauth",
+      "path": "registry/servers/builtin-statsig-oauth.json"
+    },
+    {
+      "id": "builtin-supabase",
+      "path": "registry/servers/builtin-supabase.json"
+    },
+    {
+      "id": "builtin-supabase-oauth",
+      "path": "registry/servers/builtin-supabase-oauth.json"
+    },
+    {
+      "id": "builtin-tavily",
+      "path": "registry/servers/builtin-tavily.json"
+    },
+    {
+      "id": "builtin-telegram-bot",
+      "path": "registry/servers/builtin-telegram-bot.json"
+    },
+    {
+      "id": "builtin-time",
+      "path": "registry/servers/builtin-time.json"
+    },
+    {
+      "id": "builtin-trello",
+      "path": "registry/servers/builtin-trello.json"
+    },
+    {
+      "id": "builtin-txyz-search",
+      "path": "registry/servers/builtin-txyz-search.json"
+    },
+    {
+      "id": "builtin-weather",
+      "path": "registry/servers/builtin-weather.json"
+    },
+    {
+      "id": "builtin-weatherapi",
+      "path": "registry/servers/builtin-weatherapi.json"
+    },
+    {
+      "id": "builtin-wikipedia",
+      "path": "registry/servers/builtin-wikipedia.json"
+    },
+    {
+      "id": "builtin-zapier",
+      "path": "registry/servers/builtin-zapier.json"
+    },
+    {
+      "id": "builtin-zoom-external",
+      "path": "registry/servers/builtin-zoom-external.json"
+    }
+  ]
+}

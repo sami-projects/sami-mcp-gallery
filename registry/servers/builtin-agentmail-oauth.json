@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-agentmail-oauth",
+  "title": "AgentMail",
+  "subtitle": "browser login",
+  "description": "Programmatic mailboxes for agents via the AgentMail API.",
+  "version": "0.1.0",
+  "websiteUrl": "https://docs.agentmail.to/integrations/mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-agentmail-oauth",
+      "icon": "agentmail",
+      "iconBg": "#000000",
+      "iconMode": "brand",
+      "category": "Communication",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "mailboxes / inbox workflows",
+          "description": "Manage programmatic mailboxes and related inbox automation via AgentMail hosted MCP."
+        }
+      ],
+      "about": "Hosted AgentMail MCP endpoint for mailbox creation and messaging workflows used by autonomous agents.",
+      "vendorLabel": "AgentMail"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-agentmail-oauth\": {\n      \"url\": \"https://agentmail.run.tools/\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agentmail.run.tools/"
+    }
+  ]
+}

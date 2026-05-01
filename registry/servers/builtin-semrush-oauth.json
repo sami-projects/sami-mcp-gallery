@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-semrush-oauth",
+  "title": "Semrush",
+  "subtitle": "browser login",
+  "description": "SEO, traffic, and market intelligence from Semrush APIs.",
+  "version": "0.1.0",
+  "websiteUrl": "https://developer.semrush.com/api/basics/semrush-mcp/",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-semrush-oauth",
+      "icon": "semrush",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "seo / traffic / market intelligence",
+          "description": "Query Semrush SEO and traffic intelligence workflows through hosted OAuth access."
+        }
+      ],
+      "about": "Semrush hosted MCP endpoint for SEO research and competitive market analysis.",
+      "vendorLabel": "Semrush"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-semrush-oauth\": {\n      \"url\": \"https://mcp.semrush.com/v1/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.semrush.com/v1/mcp"
+    }
+  ]
+}

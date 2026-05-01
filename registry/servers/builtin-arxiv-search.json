@@ -1,0 +1,79 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.blazickjp/arxiv-mcp-server",
+  "title": "ArXiv",
+  "description": "Search and analyze academic papers from the arXiv repository.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/blazickjp/arxiv-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://arxiv.org/",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "arxiv-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ],
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-arxiv-search",
+      "icon": "file-text",
+      "iconBg": "#00AA00",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "search_papers",
+          "description": "Search for papers on arXiv with advanced filters and sorting."
+        },
+        {
+          "name": "download_paper",
+          "description": "Download a paper and return its full text content."
+        },
+        {
+          "name": "list_papers",
+          "description": "List all papers downloaded and stored locally."
+        },
+        {
+          "name": "read_paper",
+          "description": "Read the full text content of a previously downloaded paper."
+        },
+        {
+          "name": "get_abstract",
+          "description": "Fetch abstract and metadata of an arXiv paper by ID."
+        },
+        {
+          "name": "semantic_search",
+          "description": "Run semantic similarity search over downloaded papers."
+        },
+        {
+          "name": "reindex",
+          "description": "Rebuild the local semantic index."
+        },
+        {
+          "name": "citation_graph",
+          "description": "Get citing and cited papers from citation graph sources."
+        },
+        {
+          "name": "watch_topic",
+          "description": "Create persistent alerts for new papers on a topic."
+        },
+        {
+          "name": "check_alerts",
+          "description": "Check topic watches for newly published papers."
+        }
+      ],
+      "about": "Enables AI agents to search and analyze academic papers from the arXiv repository: query with advanced filters, download and read full texts, perform semantic searches on local collections, monitor topics with alerts, and explore citation graphs. Perfect for literature reviews, staying current on research, and academic workflows.",
+      "vendorLabel": "arXiv"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-arxiv-search\": {\n      \"command\": \"uvx\",\n      \"args\": [\"arxiv-mcp-server\"]\n    }\n  }\n}"
+    }
+  }
+}

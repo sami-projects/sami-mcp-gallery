@@ -1,0 +1,55 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.upstash/context7",
+  "title": "Context7",
+  "description": "Up-to-date code documentation for LLMs and AI code editors.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/upstash/context7",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/upstash/context7",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-context7",
+      "icon": "book",
+      "iconBg": "#3b82f6",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "resolve-library-id",
+          "description": "Resolve a library name to its Context7-compatible ID and matching libraries."
+        },
+        {
+          "name": "query-docs",
+          "description": "Query up-to-date documentation and code examples for a specified library."
+        }
+      ],
+      "about": "Provides access to up-to-date code documentation and examples for various programming libraries and frameworks. Enables AI agents to resolve library IDs and query detailed docs, code snippets, and usage examples directly. Ideal for assisting in code writing, debugging, and learning new technologies.",
+      "vendorLabel": "Context7 GitHub"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-context7\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@upstash/context7-mcp\"]\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@upstash/context7-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "CONTEXT7_API_KEY",
+          "description": "API key for authentication",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

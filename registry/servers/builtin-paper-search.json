@@ -1,0 +1,55 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/paper-search-mcp",
+  "title": "Paper Search",
+  "description": "Search and fetch academic literature across major indexes and repositories.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/openags/paper-search-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/openags/paper-search-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-paper-search",
+      "icon": "book",
+      "iconBg": "#04C5F2",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "search",
+          "description": "Query multiple academic indexes and repositories for papers by topic, author, or citation."
+        },
+        {
+          "name": "fetch",
+          "description": "Retrieve metadata and often full text or PDF links where licensing and upstream allow."
+        }
+      ],
+      "about": "Aggregates literature discovery across common scholarly APIs and repositories so agents can ground answers in primary research.",
+      "vendorLabel": "Paper Search MCP"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-paper-search\": {\n      \"command\": \"uvx\",\n      \"args\": [\"--with\", \"paper-search-mcp\", \"python\", \"-m\", \"paper_search_mcp.server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "paper-search-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "SEMANTIC_SCHOLAR_API_KEY",
+          "description": "Optional API key for enhanced Semantic Scholar quotas and features.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

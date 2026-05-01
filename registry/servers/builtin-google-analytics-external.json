@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-google-analytics-external",
+  "title": "Google Analytics",
+  "subtitle": "external",
+  "description": "Website traffic, funnels, and conversions from Google Analytics.",
+  "version": "0.1.0",
+  "websiteUrl": "https://smithery.ai/servers/google_analytics",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-google-analytics-external",
+      "icon": "google",
+      "iconBg": "#FFFFFF",
+      "category": "Analytics",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "traffic / funnels / conversions",
+          "description": "Access Google Analytics reporting data from an external hosted MCP endpoint."
+        }
+      ],
+      "about": "External hosted MCP endpoint for Google Analytics reporting workflows, including traffic and conversion analysis.",
+      "vendorLabel": "Google Analytics"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-google-analytics-external\": {\n      \"url\": \"https://google_analytics.run.tools\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://google_analytics.run.tools"
+    }
+  ]
+}

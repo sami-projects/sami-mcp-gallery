@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/wikipedia-mcp",
+  "title": "Wikipedia",
+  "description": "Search and read Wikipedia articles as Markdown for factual, cited lookups.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/timjuenemann/wikipedia-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/timjuenemann/wikipedia-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-wikipedia",
+      "icon": "wikipedia",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "search",
+          "description": "Search the English Wikipedia API and return titles, snippets, and article links."
+        },
+        {
+          "name": "readArticle",
+          "description": "Load a full article as Markdown by title or page ID."
+        }
+      ],
+      "about": "Fetches and summarizes Wikipedia: search topics and read articles as Markdown to ground answers in a widely used, citable source—without API keys for public wikis."
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-wikipedia\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"wikipedia-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "wikipedia-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

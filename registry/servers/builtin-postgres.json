@@ -1,0 +1,47 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@modelcontextprotocol/server-postgres",
+  "title": "PostgreSQL",
+  "description": "Read-only database access with schema inspection",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres",
+    "source": "github"
+  },
+  "websiteUrl": "https://www.postgresql.org/",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-postgres",
+      "icon": "postgres",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "query",
+          "description": "Execute SQL in a read-only transaction."
+        },
+        {
+          "name": "postgres://<db>/<table>/schema",
+          "description": "Expose table schema resources with columns and data types."
+        }
+      ],
+      "about": "Official PostgreSQL MCP server for schema inspection and read-only SQL queries against an existing database URI.",
+      "vendorLabel": "PostgreSQL"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-postgres\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-postgres\", \"${database_uri}\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@modelcontextprotocol/server-postgres",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

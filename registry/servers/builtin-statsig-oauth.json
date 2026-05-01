@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-statsig-oauth",
+  "title": "Statsig",
+  "subtitle": "browser login",
+  "description": "Feature flags, experiments, and analytics in Statsig.",
+  "version": "0.1.0",
+  "websiteUrl": "https://www.statsig.com/blog/statsig-mcp-server-guide",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-statsig-oauth",
+      "icon": "statsig",
+      "iconBg": "#FFFFFF",
+      "category": "Analytics",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "feature flags / experiments / analytics",
+          "description": "Access Statsig experiment and feature-flag workflows via hosted OAuth endpoint."
+        }
+      ],
+      "about": "Statsig hosted MCP endpoint for feature flagging and experimentation workflows with analytics context.",
+      "vendorLabel": "Statsig"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-statsig-oauth\": {\n      \"url\": \"https://api.statsig.com/v1/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.statsig.com/v1/mcp"
+    }
+  ]
+}

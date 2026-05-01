@@ -1,0 +1,63 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/mcp-searxng",
+  "title": "SearXNG Search",
+  "description": "Web search through your SearXNG instance with pagination.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/ihor-sokoliuk/mcp-searxng",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/ihor-sokoliuk/mcp-searxng",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-searxng",
+      "icon": "searxng",
+      "iconBg": "#3050FF",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "search",
+          "description": "Query a self-hosted SearXNG endpoint with paging and optional auth."
+        }
+      ],
+      "about": "Privacy-friendly federated search via your own SearXNG instance, exposed to agents through MCP.",
+      "vendorLabel": "SearXNG"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-searxng\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-searxng\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "mcp-searxng",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "SEARXNG_URL",
+          "description": "Base URL of your SearXNG instance.",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "AUTH_USERNAME",
+          "description": "Optional basic auth username for protected instances.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "AUTH_PASSWORD",
+          "description": "Optional basic auth password for protected instances.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

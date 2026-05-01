@@ -1,0 +1,71 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-asana-oauth",
+  "title": "Asana",
+  "subtitle": "browser login",
+  "description": "Work management and team collaboration in Asana.",
+  "version": "0.1.0",
+  "websiteUrl": "https://developers.asana.com/docs/using-asanas-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-asana-oauth",
+      "icon": "asana",
+      "iconBg": "#ee5f2b",
+      "category": "Productivity",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "list_workspaces",
+          "description": "Retrieve all workspaces accessible to the authenticated user."
+        },
+        {
+          "name": "get_projects",
+          "description": "Fetch projects within a specified workspace."
+        },
+        {
+          "name": "create_project",
+          "description": "Create a new project with name, description, and settings."
+        },
+        {
+          "name": "get_tasks",
+          "description": "List tasks in a project or section, with optional filters."
+        },
+        {
+          "name": "create_task",
+          "description": "Add a new task to a project, with assignee and due date."
+        },
+        {
+          "name": "update_task",
+          "description": "Modify task properties like completion status or custom fields."
+        },
+        {
+          "name": "search_asana",
+          "description": "Search for tasks, projects, or users across the workspace."
+        },
+        {
+          "name": "add_comment",
+          "description": "Post a comment on a task."
+        },
+        {
+          "name": "get_project_overview",
+          "description": "Get summary and status of a project."
+        },
+        {
+          "name": "generate_report",
+          "description": "Create reports based on Asana data."
+        }
+      ],
+      "about": "Asana Official MCP Server. Enables AI agents to interact with Asana workspaces: access data, create and manage tasks and projects, generate reports, and get AI-powered insights through natural language commands. Useful for work management, team collaboration, and automated task handling.",
+      "vendorLabel": "Asana Developer Portal"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-asana-oauth\": {\n      \"url\": \"https://mcp.asana.com/sse\",\n      \"type\": \"sse\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://mcp.asana.com/sse"
+    }
+  ]
+}

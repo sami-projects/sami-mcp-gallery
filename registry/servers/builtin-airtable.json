@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/airtable-mcp-server",
+  "title": "Airtable",
+  "description": "Read and write Airtable bases, tables, and records.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/domdomegg/airtable-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/domdomegg/airtable-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-airtable",
+      "icon": "airtable",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "bases / tables / records",
+          "description": "List bases and tables, then read or update Airtable records through MCP tools."
+        }
+      ],
+      "about": "Airtable MCP server for structured collaboration data: work with bases, tables, and records from an agent using a PAT.",
+      "vendorLabel": "Airtable"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-airtable\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"airtable-mcp-server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "airtable-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "AIRTABLE_API_KEY",
+          "description": "Airtable personal access token (pat...).",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

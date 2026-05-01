@@ -1,0 +1,107 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.iqaicom/mcp-discord",
+  "title": "Discord",
+  "description": "Discord servers: channels, messages, reactions, forums, webhooks, and moderation basics.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/iqaicom/mcp-discord",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/iqaicom/mcp-discord",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@iqai/mcp-discord",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "DISCORD_TOKEN",
+          "description": "Bot token from Discord Developer Portal.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "SAMPLING_ENABLED",
+          "description": "Enables bidirectional message sampling.",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "true"
+        },
+        {
+          "name": "TRANSPORT",
+          "description": "Transport method: stdio or http.",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "stdio"
+        },
+        {
+          "name": "RESPOND_TO_MENTIONS_ONLY",
+          "description": "Only respond when bot is mentioned.",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "true"
+        },
+        {
+          "name": "BLOCK_DMS",
+          "description": "Block direct messages to the bot.",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "true"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-discord",
+      "icon": "discord",
+      "iconBg": "#FFFFFF",
+      "category": "Communication",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "send_message",
+          "description": "Send a message to a Discord text channel."
+        },
+        {
+          "name": "read_messages",
+          "description": "Read recent messages from a channel."
+        },
+        {
+          "name": "delete_message",
+          "description": "Delete a channel message by ID."
+        },
+        {
+          "name": "create_channel",
+          "description": "Create a new text channel."
+        },
+        {
+          "name": "delete_channel",
+          "description": "Delete an existing channel."
+        },
+        {
+          "name": "create_forum_post",
+          "description": "Create a new forum thread with initial content."
+        },
+        {
+          "name": "reply_to_forum_post",
+          "description": "Post a reply in an existing forum thread."
+        },
+        {
+          "name": "add_reaction",
+          "description": "Add one or more emoji reactions to a message."
+        }
+      ],
+      "about": "Integrates with Discord to provide capabilities including message management, channel operations, forum posts, reactions, webhooks, and server administration with automatic reconnection and rate limiting protection.",
+      "vendorLabel": "Discord Developer Portal"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"discord\": {\n      \"command\": \"npx\",\n      \"args\": [\"@iqai/mcp-discord\"],\n      \"env\": {\n        \"DISCORD_TOKEN\": \"YOUR_DISCORD_TOKEN\"\n      }\n    }\n  }\n}"
+    }
+  }
+}

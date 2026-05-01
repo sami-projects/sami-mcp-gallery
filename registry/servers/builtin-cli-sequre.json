@@ -1,0 +1,90 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mladensu/cli-mcp-server",
+  "title": "CLI Secure",
+  "description": "Execute shell commands with strict security policies.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/mladensu/cli-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/mladensu/cli-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-cli-sequre",
+      "icon": "terminal",
+      "iconBg": "#4F46E5",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "run_command",
+          "description": "Execute a single secure CLI command in the configured sandbox directory. Allowlists for commands and flags apply; shell operators are disabled by default."
+        },
+        {
+          "name": "show_security_rules",
+          "description": "Show the security configuration, including allowed commands, flags, limits, and working directory."
+        }
+      ],
+      "about": "Execute shell commands with strict security policies in a sandboxed environment. Supports running limited CLI commands like ls, cat, pwd, echo with specific flags, ensuring safe command execution for AI agents.",
+      "vendorLabel": "CLI Secure GitHub"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-cli-sequre\": {\n      \"command\": \"uvx\",\n      \"args\": [\"cli-mcp-server\"],\n      \"env\": {\n        \"ALLOWED_COMMANDS\": \"ls,cat,pwd,echo\",\n        \"ALLOWED_FLAGS\": \"-l,-a,--help,--version\",\n        \"MAX_COMMAND_LENGTH\": \"1024\",\n        \"COMMAND_TIMEOUT\": \"30\",\n        \"ALLOW_SHELL_OPERATORS\": \"false\"\n      }\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "cli-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "ALLOWED_COMMANDS",
+          "description": "Comma-separated list of allowed commands (default: ls,cat,pwd,echo)",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "ls,cat,pwd,echo"
+        },
+        {
+          "name": "ALLOWED_FLAGS",
+          "description": "Comma-separated list of allowed flags (default: -l,-a,--help,--version)",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "-l,-a,--help,--version"
+        },
+        {
+          "name": "MAX_COMMAND_LENGTH",
+          "description": "Maximum length of a command in characters (default: 1024)",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "1024"
+        },
+        {
+          "name": "COMMAND_TIMEOUT",
+          "description": "Timeout for command execution in seconds (default: 30)",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "30"
+        },
+        {
+          "name": "ALLOW_SHELL_OPERATORS",
+          "description": "Allow shell operators like &&, || (default: false)",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "false"
+        },
+        {
+          "name": "ALLOWED_DIR",
+          "description": "The allowed directory for command execution",
+          "isRequired": true,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-instagram-external",
+  "title": "Instagram",
+  "subtitle": "external",
+  "description": "Instagram Business and Creator accounts (posts, media, and insights; personal profiles not supported).",
+  "version": "0.1.0",
+  "websiteUrl": "https://smithery.ai/servers/instagram",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-instagram-external",
+      "icon": "instagram",
+      "iconBg": "#FFFFFF",
+      "category": "Communication",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "posts / media / insights",
+          "description": "Use Instagram Business and Creator account data via an external hosted MCP endpoint."
+        }
+      ],
+      "about": "External hosted Instagram MCP endpoint focused on business workflows for media and insights.",
+      "vendorLabel": "Instagram"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-instagram-external\": {\n      \"url\": \"https://instagram.run.tools\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://instagram.run.tools"
+    }
+  ]
+}

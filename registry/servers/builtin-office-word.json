@@ -1,0 +1,55 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/office-word-mcp-server",
+  "title": "Office Word",
+  "description": "Create and edit Word documents (.docx): text, tables, images, and styles.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/gongrzhe/office-word-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/gongrzhe/office-word-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-office-word",
+      "icon": "word",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "create_document",
+          "description": "Create a new .docx document with metadata."
+        },
+        {
+          "name": "add_heading / add_paragraph",
+          "description": "Insert structured text with formatting options."
+        },
+        {
+          "name": "add_table / format_table",
+          "description": "Build and style tables, including cell-level formatting."
+        },
+        {
+          "name": "convert_to_pdf",
+          "description": "Convert Word documents to PDF."
+        }
+      ],
+      "about": "Office Word MCP exposes rich .docx editing workflows: document creation, headings, paragraphs, lists, tables, styles, comments, and export flows.",
+      "vendorLabel": "Office Word MCP Server"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-office-word\": {\n      \"command\": \"uvx\",\n      \"args\": [\"--from\", \"office-word-mcp-server\", \"word_mcp_server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "office-word-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

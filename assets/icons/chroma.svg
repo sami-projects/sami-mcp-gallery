@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-hidden="true">
+  <title>Chroma</title>
+  <!-- Two overlapping circles (Venn): blue | orange overlap | yellow — centers spaced by radius -->
+  <defs>
+    <clipPath id="chromaLeft"><circle cx="35" cy="50" r="30"/></clipPath>
+    <clipPath id="chromaRight"><circle cx="65" cy="50" r="30"/></clipPath>
+    <mask id="chromaLeftOnly" maskUnits="userSpaceOnUse">
+      <circle cx="35" cy="50" r="30" fill="#fff"/>
+      <circle cx="65" cy="50" r="30" fill="#000"/>
+    </mask>
+    <mask id="chromaRightOnly" maskUnits="userSpaceOnUse">
+      <circle cx="65" cy="50" r="30" fill="#fff"/>
+      <circle cx="35" cy="50" r="30" fill="#000"/>
+    </mask>
+  </defs>
+  <g clip-path="url(#chromaLeft)">
+    <g clip-path="url(#chromaRight)">
+      <rect width="100" height="100" fill="#FF7043"/>
+    </g>
+  </g>
+  <circle cx="35" cy="50" r="30" fill="#2962FF" mask="url(#chromaLeftOnly)"/>
+  <circle cx="65" cy="50" r="30" fill="#FFD600" mask="url(#chromaRightOnly)"/>
+</svg>

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@tacticlaunch/mcp-linear",
+  "title": "Linear",
+  "description": "Issues, roadmaps, and project delivery in Linear.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/tacticlaunch/mcp-linear",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/tacticlaunch/mcp-linear",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-linear",
+      "icon": "linear",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "linear_getIssues",
+          "description": "List and filter issues across teams and projects."
+        },
+        {
+          "name": "linear_getIssueById",
+          "description": "Load an issue by ID or key (e.g. PROJ-12)."
+        },
+        {
+          "name": "linear_createIssue",
+          "description": "Create a new issue in a team."
+        },
+        {
+          "name": "linear_updateIssue",
+          "description": "Update fields, state, and assignment on an issue."
+        },
+        {
+          "name": "linear_searchIssues",
+          "description": "Search with filters, including text and state."
+        }
+      ],
+      "about": "MCP server for the Linear GraphQL API: issues, projects, teams, comments, labels, and cycles, driven by a personal API token in Sami or your environment.",
+      "vendorLabel": "Tacticlaunch"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-linear\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@tacticlaunch/mcp-linear\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@tacticlaunch/mcp-linear",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "LINEAR_API_TOKEN",
+          "description": "Personal API key from Linear (Settings — API).",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.exa-labs/exa-mcp-server",
+  "title": "Exa Search",
+  "description": "Web, code snippet, and company search via the Exa API.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/exa-labs/exa-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://exa.ai/",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-exa",
+      "icon": "exa",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "web_search_exa",
+          "description": "Search the web for any topic and get clean, ready-to-use content."
+        },
+        {
+          "name": "web_fetch_exa",
+          "description": "Get the full content of a specific webpage from a known URL."
+        },
+        {
+          "name": "web_search_advanced_exa",
+          "description": "Advanced web search with full control over filters, domains, dates, and content options."
+        }
+      ],
+      "about": "Enables AI agents to perform web searches, code searches, and company research using the Exa Search API through MCP tools. Ideal for information retrieval, research automation, and data gathering workflows.",
+      "vendorLabel": "Exa AI"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-exa\": {\n      \"command\": \"npx\",\n      \"args\": [\"exa-mcp-server\"]\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "exa-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "EXA_API_KEY",
+          "description": "API key from dashboard.exa.ai/api-keys",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

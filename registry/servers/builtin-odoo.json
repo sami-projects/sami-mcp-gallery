@@ -1,0 +1,93 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-server-odoo",
+  "title": "Odoo",
+  "description": "Odoo ERP through your instance: read and update CRM, accounting, inventory, and other modules you expose via URL and credentials.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/ivnvxd/mcp-server-odoo",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/ivnvxd/mcp-server-odoo",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-odoo",
+      "icon": "odoo",
+      "iconBg": "#9C678E",
+      "category": "Productivity",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "erp_modules",
+          "description": "Work with Odoo business objects across CRM, accounting, inventory, and more."
+        }
+      ],
+      "about": "Odoo MCP connector for self-hosted or cloud instances with credential-based auth and optional HTTP transport settings.",
+      "vendorLabel": "Odoo"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-odoo\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-odoo\"],\n      \"env\": {},\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-server-odoo",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "ODOO_URL",
+          "description": "Odoo instance URL.",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "ODOO_USER",
+          "description": "Odoo username (if not using API key-only flow).",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "ODOO_PASSWORD",
+          "description": "Odoo password.",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "ODOO_DB",
+          "description": "Database name when auto-discovery is unavailable.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "ODOO_MCP_TRANSPORT",
+          "description": "Optional MCP transport override (stdio or streamable-http).",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "ODOO_MCP_HOST",
+          "description": "Host binding for HTTP transport.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "ODOO_MCP_PORT",
+          "description": "Port binding for HTTP transport.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "ODOO_API_KEY",
+          "description": "API key for Odoo authentication.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-reddit-external",
+  "title": "Reddit",
+  "subtitle": "external",
+  "description": "Browse Reddit: posts, comments, and subreddit metadata via Reddit's APIs.",
+  "version": "0.1.0",
+  "websiteUrl": "https://smithery.ai/servers/reddit",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-reddit-external",
+      "icon": "reddit",
+      "iconBg": "#FF4500",
+      "category": "Communication",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "posts / comments / subreddits",
+          "description": "Browse Reddit content and subreddit metadata through an external hosted endpoint."
+        }
+      ],
+      "about": "External hosted Reddit MCP endpoint for reading subreddit content, posts, and comment threads.",
+      "vendorLabel": "Reddit"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-reddit-external\": {\n      \"url\": \"https://reddit.run.tools\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://reddit.run.tools"
+    }
+  ]
+}

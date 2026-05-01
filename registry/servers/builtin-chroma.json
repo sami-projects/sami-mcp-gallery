@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/chroma-mcp",
+  "title": "Chroma",
+  "description": "Chroma vector database: collections, embeddings, and similarity search.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/chroma-core/chroma-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/chroma-core/chroma-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-chroma",
+      "icon": "chroma",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "collections / query",
+          "description": "Manage embedding collections and run similarity search across vector stores."
+        }
+      ],
+      "about": "Chroma MCP exposes vector database operations for RAG and semantic retrieval with configurable client modes.",
+      "vendorLabel": "Chroma"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-chroma\": {\n      \"command\": \"uvx\",\n      \"args\": [\"chroma-mcp\"],\n      \"env\": {\n        \"CHROMA_CLIENT_TYPE\": \"ephemeral\",\n        \"CHROMA_DOTENV_PATH\": \"${HOME}/.chroma_env\"\n      },\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "chroma-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

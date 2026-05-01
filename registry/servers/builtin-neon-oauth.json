@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-neon-oauth",
+  "title": "Neon",
+  "subtitle": "browser login",
+  "description": "Neon serverless Postgres: branches, databases, SQL, and the Neon management API.",
+  "version": "0.1.0",
+  "websiteUrl": "https://neon.tech",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-neon-oauth",
+      "icon": "neon",
+      "iconBg": "#000000",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "branches / sql / management API",
+          "description": "Manage Neon projects and Postgres branches via the hosted OAuth MCP endpoint."
+        }
+      ],
+      "about": "Neon hosted MCP endpoint with browser login for serverless Postgres workflows and management operations.",
+      "vendorLabel": "Neon"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-neon-oauth\": {\n      \"url\": \"https://mcp.neon.tech/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.neon.tech/mcp"
+    }
+  ]
+}

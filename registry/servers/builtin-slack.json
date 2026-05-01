@@ -1,0 +1,65 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@zencoderai/slack-mcp-server",
+  "title": "Slack",
+  "description": "Slack workspace via bot token: channels, messaging, threads, and member profiles.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/zencoderai/slack-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/zencoderai/slack-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-slack",
+      "icon": "slack",
+      "iconBg": "#FFFFFF",
+      "category": "Communication",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "slack_list_channels",
+          "description": "List public or configured channels in the workspace (pagination supported)."
+        },
+        {
+          "name": "slack_post_message",
+          "description": "Post a new message to a channel (channel_id + text)."
+        },
+        {
+          "name": "slack_get_channel_history",
+          "description": "Fetch recent messages from a channel (optional limit)."
+        }
+      ],
+      "about": "Connects a Slack app (bot token) so agents can list channels, read and post messages, and work with threads and member info according to the server’s tool surface.",
+      "vendorLabel": "Slack"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-slack\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@zencoderai/slack-mcp-server\"],\n      \"env\": {\n        \"SLACK_BOT_TOKEN\": \"\",\n        \"SLACK_TEAM_ID\": \"\"\n      },\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@zencoderai/slack-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "SLACK_BOT_TOKEN",
+          "description": "Slack bot user OAuth token (xoxb-).",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "SLACK_TEAM_ID",
+          "description": "Slack workspace (team) ID.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-mixpanel-oauth",
+  "title": "Mixpanel",
+  "subtitle": "browser login",
+  "description": "Product analytics and behavioral data in Mixpanel.",
+  "version": "0.1.0",
+  "websiteUrl": "https://docs.mixpanel.com/docs/mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-mixpanel-oauth",
+      "icon": "mixpanel",
+      "iconBg": "#FFFFFF",
+      "category": "Analytics",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "events / funnels / behavioral analytics",
+          "description": "Query Mixpanel product analytics and behavioral insights through hosted OAuth access."
+        }
+      ],
+      "about": "Mixpanel hosted MCP endpoint for authenticated product analytics workflows.",
+      "vendorLabel": "Mixpanel"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-mixpanel-oauth\": {\n      \"url\": \"https://mcp-in.mixpanel.com/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp-in.mixpanel.com/mcp"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@swonixs/weatherapi-mcp",
+  "title": "WeatherAPI",
+  "description": "Current weather and air quality via WeatherAPI.com (API key required).",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/swonixs/weatherapi-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://weatherapi.com",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-weatherapi",
+      "icon": "weather",
+      "iconBg": "#0EA5E9",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "get_weather",
+          "description": "Get current weather and optional air-quality data for a specified location."
+        }
+      ],
+      "about": "WeatherAPI MCP provides live current weather and air-quality lookup through WeatherAPI.com, suitable for travel planning, local context, and quick environment checks.",
+      "vendorLabel": "WeatherAPI"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-weatherapi\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@swonixs/weatherapi-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@swonixs/weatherapi-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "WEATHER_API_KEY",
+          "description": "API key from weatherapi.com dashboard.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

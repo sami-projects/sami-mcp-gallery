@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-gmail-external",
+  "title": "Gmail",
+  "subtitle": "external",
+  "description": "Gmail and Google Contacts: messages, threads, labels, drafts, attachments, and inbox organization.",
+  "version": "0.1.0",
+  "websiteUrl": "https://smithery.ai/servers/gmail",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-gmail-external",
+      "icon": "gmail",
+      "iconBg": "#FFFFFF",
+      "category": "Communication",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "messages / contacts / labels",
+          "description": "Work with Gmail messages, contacts, labels, drafts, and attachments through an external hosted endpoint."
+        }
+      ],
+      "about": "Externally hosted Gmail MCP endpoint oriented to mailbox and Google Contacts workflows.",
+      "vendorLabel": "Gmail"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-gmail-external\": {\n      \"url\": \"https://gmail.run.tools\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gmail.run.tools"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-sentry-oauth",
+  "title": "Sentry",
+  "subtitle": "browser login",
+  "description": "Errors, stack traces, releases, and issue triage in Sentry.",
+  "version": "0.1.0",
+  "websiteUrl": "https://docs.sentry.io/ai/mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-sentry-oauth",
+      "icon": "sentry",
+      "iconBg": "#FFFFFF",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "errors / stack traces / issue triage",
+          "description": "Use Sentry-hosted OAuth endpoint for release health and issue investigation workflows."
+        }
+      ],
+      "about": "Sentry hosted MCP endpoint for debugging and release monitoring tasks through browser login.",
+      "vendorLabel": "Sentry"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-sentry-oauth\": {\n      \"url\": \"https://mcp.sentry.dev/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.sentry.dev/mcp"
+    }
+  ]
+}

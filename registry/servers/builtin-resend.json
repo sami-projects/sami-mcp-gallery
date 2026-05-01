@@ -1,0 +1,71 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/resend-mcp",
+  "title": "Resend Email",
+  "description": "Compose and send emails through the Resend API.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/resend/resend-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://resend.com",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-resend",
+      "icon": "resend",
+      "iconBg": "#2563EB",
+      "category": "Communication",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "emails",
+          "description": "Send, list, update, cancel, and batch-send emails with scheduling and reply-to support."
+        },
+        {
+          "name": "contacts_and_segments",
+          "description": "Manage contacts, segments, topics, and related attributes for audience workflows."
+        },
+        {
+          "name": "domains_and_webhooks",
+          "description": "Manage sender domains, API keys, broadcasts, and webhook integrations."
+        }
+      ],
+      "about": "Resend MCP exposes Resend email operations to agents: transactional and scheduled sends, inbound mail handling, contacts, segments, domains, broadcasts, and webhooks with one API key.",
+      "vendorLabel": "Resend"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-resend\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"resend-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "resend-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "RESEND_API_KEY",
+          "description": "API key from resend.com/api-keys",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "SENDER_EMAIL_ADDRESS",
+          "description": "Default sender address from a verified domain (optional).",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "REPLY_TO_EMAIL_ADDRESSES",
+          "description": "Comma-separated reply-to addresses (optional).",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/openbrand-mcp",
+  "title": "OpenBrand",
+  "description": "Extracts brand assets including logos, colors, backdrop images, and brand names from any website URL",
+  "version": "0.1.0",
+  "websiteUrl": "https://www.npmjs.com/package/openbrand-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-openbrand",
+      "icon": "openbrand",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "brand assets / logos / colors",
+          "description": "Extract logo files, color palettes, backdrop images, and brand names from site URLs."
+        }
+      ],
+      "about": "OpenBrand MCP focuses on extracting core branding assets and metadata from websites.",
+      "vendorLabel": "OpenBrand"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-openbrand\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"openbrand-mcp\"\n      ],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "openbrand-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "OPENBRAND_API_KEY",
+          "description": "API key for OpenBrand asset extraction.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

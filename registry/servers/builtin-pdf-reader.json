@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@sylphx/pdf-reader-mcp",
+  "title": "PDF Reader",
+  "description": "Read PDF files and extract text, metadata, embedded images, and page information.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/sylphxai/pdf-reader-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/sylphxai/pdf-reader-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-pdf-reader",
+      "icon": "pdf-reader",
+      "iconBg": "#E53E3E",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "read_pdf",
+          "description": "Extract text, metadata, images, and per-page structure from PDF files."
+        }
+      ],
+      "about": "PDF ingestion MCP for agents that need reliable text and layout cues from documents."
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-pdf-reader\": {\n      \"command\": \"npx\",\n      \"args\": [\"@sylphx/pdf-reader-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@sylphx/pdf-reader-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

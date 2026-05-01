@@ -1,0 +1,63 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@perplexity-ai/mcp-server",
+  "title": "Perplexity",
+  "description": "Answer-focused web lookup across domains via Perplexity.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/perplexityai/modelcontextprotocol",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/perplexityai/modelcontextprotocol",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-perplexity",
+      "icon": "perplexity",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "perplexity_search",
+          "description": "Direct web search with ranked results and metadata (Search API)."
+        },
+        {
+          "name": "perplexity_ask",
+          "description": "Q&A with real-time search via the sonar-pro model."
+        },
+        {
+          "name": "perplexity_research",
+          "description": "Deep research reports using the sonar-deep-research model."
+        },
+        {
+          "name": "perplexity_reason",
+          "description": "Advanced reasoning and analysis with sonar-reasoning-pro."
+        }
+      ],
+      "about": "The official Perplexity MCP server on npm is `@perplexity-ai/mcp-server`; search, Q&A, research, and deep reasoning are backed by the same API. Sami’s builtin config uses `uvx` with the same package coordinates—set `PERPLEXITY_API_KEY` in the environment for either runner.",
+      "vendorLabel": "Perplexity"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-perplexity\": {\n      \"command\": \"uvx\",\n      \"args\": [\"-y\", \"@perplexity-ai/mcp-server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@perplexity-ai/mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "PERPLEXITY_API_KEY",
+          "description": "Perplexity API key (https://console.perplexity.ai).",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

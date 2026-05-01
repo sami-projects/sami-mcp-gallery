@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-science",
+  "title": "TXYZ Search",
+  "description": "Scholarly, web, and blended search via the TXYZ API.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/pathintegral-institute/mcp.science/tree/main/servers/txyz-search",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/pathintegral-institute/mcp.science/tree/main/servers/txyz-search",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-txyz-search",
+      "icon": "txyz",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "scholarly / web / blended search",
+          "description": "Run TXYZ API search workflows for academic and web discovery tasks."
+        }
+      ],
+      "about": "txyz-search server from mcp.science enables scholarly and web search against TXYZ APIs.",
+      "vendorLabel": "TXYZ"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-txyz-search\": {\n      \"command\": \"uvx\",\n      \"args\": [\n        \"mcp-science\",\n        \"txyz-search\"\n      ],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-science",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "TXYZ_API_KEY",
+          "description": "API key from TXYZ platform console.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

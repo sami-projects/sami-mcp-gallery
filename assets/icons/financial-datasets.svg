@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true">
+  <title>Financial data</title>
+  <!-- Neutral bar-chart glyph (not a vendor logo): readable via currentColor on cards -->
+  <path fill="currentColor" fill-rule="evenodd" d="M5 20h2.25v-7H5v7Zm5.25 0h2.25V8h-2.25v12Zm5.25 0H18v-9h-2.25v9ZM3 22h18v-2H3v2Z"/>
+</svg>

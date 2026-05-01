@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-posthog-oauth",
+  "title": "PostHog",
+  "subtitle": "browser login",
+  "description": "PostHog: analytics queries, feature flags, experiments, insights, and error tracking.",
+  "version": "0.1.0",
+  "websiteUrl": "https://posthog.com",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-posthog-oauth",
+      "icon": "posthog",
+      "iconBg": "#FFFFFF",
+      "category": "Analytics",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "analytics / feature flags / experiments",
+          "description": "Use PostHog analytics, insights, flags, experiments, and error-tracking workflows over OAuth."
+        }
+      ],
+      "about": "PostHog hosted MCP endpoint for product analytics and experimentation workflows with browser login.",
+      "vendorLabel": "PostHog"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-posthog-oauth\": {\n      \"url\": \"https://mcp.posthog.com/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.posthog.com/mcp"
+    }
+  ]
+}

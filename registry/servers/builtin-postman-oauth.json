@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-postman-oauth",
+  "title": "Postman",
+  "subtitle": "browser Login",
+  "description": "API development in Postman: collections, testing, documentation, and environments.",
+  "version": "0.1.0",
+  "websiteUrl": "https://learning.postman.com/docs/developer/postman-api/postman-mcp-server/overview",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-postman-oauth",
+      "icon": "postman",
+      "iconBg": "#FF6C37",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "collections / environments / API workflows",
+          "description": "Access Postman API development workflows through the hosted OAuth MCP endpoint."
+        }
+      ],
+      "about": "Postman hosted MCP endpoint with browser login for collection-centric API development workflows.",
+      "vendorLabel": "Postman"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-postman-oauth\": {\n      \"url\": \"https://mcp.postman.com/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.postman.com/mcp"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.brave/brave-search-mcp-server",
+  "title": "Brave Search",
+  "description": "Web, news, images, video, local results, and summaries via Brave Search.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/brave/brave-search-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/brave/brave-search-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-brave",
+      "icon": "brave",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "brave_web_search",
+          "description": "Performs comprehensive web searches with rich result types and advanced filtering options."
+        },
+        {
+          "name": "brave_local_search",
+          "description": "Searches for local businesses and places with detailed information including ratings, hours, and AI-generated descriptions."
+        },
+        {
+          "name": "brave_video_search",
+          "description": "Searches for videos with comprehensive metadata and thumbnail information."
+        },
+        {
+          "name": "brave_image_search",
+          "description": "Searches for images with automatic fetching and base64 encoding for direct display."
+        },
+        {
+          "name": "brave_news_search",
+          "description": "Searches for current news articles with freshness controls and breaking news indicators."
+        },
+        {
+          "name": "brave_summarizer",
+          "description": "Generates AI-powered summaries from web search results using Brave's summarization API."
+        }
+      ],
+      "about": "Integrates Brave's Search API to provide web search, local business search, image search, video search, news search, and summarization capabilities.",
+      "vendorLabel": "Brave Search API"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-brave\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@brave/brave-search-mcp-server\", \"--transport\", \"http\"],\n      \"env\": {\n        \"BRAVE_API_KEY\": \"YOUR_API_KEY_HERE\"\n      }\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@brave/brave-search-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "BRAVE_API_KEY",
+          "description": "API key for authentication with the Brave Search API. Sign up for an account and generate your key from the Brave Search API developer dashboard (api.search.brave.com/app/keys).",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "BRAVE_MCP_TRANSPORT",
+          "description": "Transport mode (\\\"http\\\" or \\\"stdio\\\", default: \\\"stdio\\\")",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "stdio"
+        },
+        {
+          "name": "BRAVE_MCP_PORT",
+          "description": "HTTP server port (default: 8000)",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "8000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "searchcode/mcp",
+  "title": "Searchcode",
+  "description": "Code intelligence for LLMs. Analyze, search, and retrieve code from any public git repository",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://searchcode.com",
+    "source": "website"
+  },
+  "websiteUrl": "https://searchcode.com",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-searchcode",
+      "icon": "search",
+      "iconBg": "#E8EAEF",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "search / analyze repository code",
+          "description": "Search and inspect public repository code through hosted Searchcode MCP endpoints."
+        }
+      ],
+      "about": "Hosted MCP endpoint for repository code retrieval and analysis across public Git sources.",
+      "vendorLabel": "Searchcode"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-searchcode\": {\n      \"url\": \"https://api.searchcode.com/v1/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.searchcode.com/v1/mcp"
+    }
+  ]
+}

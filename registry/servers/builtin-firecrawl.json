@@ -1,0 +1,59 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/firecrawl-mcp",
+  "title": "Firecrawl",
+  "description": "Advanced web scraping with JavaScript rendering, PDF support, and smart rate limiting",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/mendableai/firecrawl-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://www.firecrawl.dev/",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-firecrawl",
+      "icon": "firecrawl",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "firecrawl_scrape",
+          "description": "Scrape a single URL with formats (markdown, HTML, links, screenshots) and options."
+        },
+        {
+          "name": "firecrawl_map",
+          "description": "Map a website to discover indexed URLs and structure."
+        },
+        {
+          "name": "firecrawl_crawl",
+          "description": "Crawl from a start URL with depth/limits; poll status with the companion check tool when used."
+        }
+      ],
+      "about": "Firecrawl turns websites into clean, model-friendly data: scrape, map, and crawl with JS rendering and rate limiting via the cloud API (API key) or a self-hosted instance.",
+      "vendorLabel": "Firecrawl"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-firecrawl\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"firecrawl-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "firecrawl-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "FIRECRAWL_API_KEY",
+          "description": "Your Firecrawl API key. Required for using the cloud API (default) and optional for self-hosted instances.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

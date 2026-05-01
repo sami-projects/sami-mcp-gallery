@@ -1,0 +1,136 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.mcp/wonderwhy-er-desktop-commander",
+  "title": "Desktop Commander MCP",
+  "description": "Local shell commands, processes, and advanced file operations on this machine.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/mcp/wonderwhy-er/desktop-commander",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/mcp/wonderwhy-er/desktop-commander",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-desktop-commander",
+      "icon": "terminal",
+      "iconBg": "#4A90E2",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "get_config",
+          "description": "Retrieve the complete server configuration including allowed directories, blocked commands, and system info."
+        },
+        {
+          "name": "set_config_value",
+          "description": "Update configuration values like allowed directories or file limits."
+        },
+        {
+          "name": "read_file",
+          "description": "Read file contents supporting text, PDFs, Excel, DOCX, and images with pagination."
+        },
+        {
+          "name": "read_multiple_files",
+          "description": "Read contents of multiple files simultaneously for comparison or analysis."
+        },
+        {
+          "name": "write_file",
+          "description": "Create or append to text files and Excel sheets, with chunking for large files."
+        },
+        {
+          "name": "write_pdf",
+          "description": "Generate new PDFs from markdown or modify existing ones with insert/delete operations."
+        },
+        {
+          "name": "create_directory",
+          "description": "Create directories, including nested paths."
+        },
+        {
+          "name": "list_directory",
+          "description": "List files and directories with recursion and size information."
+        },
+        {
+          "name": "move_file",
+          "description": "Move or rename files and directories within allowed paths."
+        },
+        {
+          "name": "search_files",
+          "description": "Recursively search for files matching glob patterns."
+        },
+        {
+          "name": "get_file_info",
+          "description": "Get metadata like size, timestamps, and permissions for files/directories."
+        },
+        {
+          "name": "edit_block",
+          "description": "Perform precise edits in text, Excel ranges, or DOCX XML."
+        },
+        {
+          "name": "start_process",
+          "description": "Launch terminal processes or REPLs (Python, Node.js) for interactive execution."
+        },
+        {
+          "name": "interact_with_process",
+          "description": "Send commands to and retrieve output from running processes."
+        },
+        {
+          "name": "start_search",
+          "description": "Initiate streaming file or content searches with progressive results."
+        },
+        {
+          "name": "list_processes",
+          "description": "View all running processes with resource usage details."
+        },
+        {
+          "name": "kill_process",
+          "description": "Terminate processes by PID."
+        }
+      ],
+      "about": "Integrates terminal and filesystem capabilities for executing system commands, managing processes, and performing advanced file operations on the local system. Enables AI agents to read/write files, run shell commands, search directories, and manage processes securely within allowed paths.",
+      "vendorLabel": "Desktop Commander npm"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-desktop-commander\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@wonderwhy-er/desktop-commander@latest\"]\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@wonderwhy-er/desktop-commander",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "ALLOWED_DIRECTORIES",
+          "description": "Array of paths the server can access (configured via set_config_value)",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "DEFAULT_SHELL",
+          "description": "Shell to use for commands (e.g., powershell.exe, cmd)",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "powershell.exe"
+        },
+        {
+          "name": "TELEMETRY_ENABLED",
+          "description": "Enable telemetry data collection",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "false"
+        },
+        {
+          "name": "TRANSPORT",
+          "description": "Transport method: stdio or http",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "stdio"
+        }
+      ]
+    }
+  ]
+}

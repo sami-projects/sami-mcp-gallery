@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "kaggle/mcp",
+  "title": "Kaggle",
+  "description": "Integrates with Kaggle's API to enable competition participation, dataset management, kernel operations, and model submissions for data scientists and machine learning practitioners.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://www.kaggle.com",
+    "source": "website"
+  },
+  "websiteUrl": "https://www.kaggle.com/docs/mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-kaggle",
+      "icon": "kaggle",
+      "iconBg": "#20BEFF",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "competitions / datasets / kernels",
+          "description": "Work with Kaggle competitions, datasets, notebooks/kernels, and submissions via hosted MCP."
+        }
+      ],
+      "about": "Hosted Kaggle MCP endpoint for ML workflows: competitions, datasets, kernels, and related API operations with bearer auth.",
+      "vendorLabel": "Kaggle"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-kaggle\": {\n      \"url\": \"https://www.kaggle.com/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.kaggle.com/mcp"
+    }
+  ]
+}

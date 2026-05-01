@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-server-sqlite",
+  "title": "SQLite",
+  "description": "Work with SQLite: inspect table structure, read data, and modify records with SQL queries.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers-archived",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-sqlite",
+      "icon": "sqlite",
+      "iconBg": "#003B57",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "read_query",
+          "description": "Run read-only SQL (SELECT) against the opened database."
+        },
+        {
+          "name": "write_query",
+          "description": "Run SQL that mutates data (INSERT/UPDATE/DELETE) when not restricted by deployment."
+        },
+        {
+          "name": "list_tables / describe-table",
+          "description": "List tables and view column types for a chosen table (per upstream README)."
+        }
+      ],
+      "about": "MCP server for a local SQLite file: run SQL, explore schema, and let agents work with structured data without leaving the stdio tool host.",
+      "vendorLabel": "SQLite"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-sqlite\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-sqlite\", \"--db-path\", \"${db_path}\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-server-sqlite",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

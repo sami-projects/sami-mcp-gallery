@@ -1,0 +1,63 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-google-sheets",
+  "title": "Google Sheets",
+  "description": "Google Drive and Google Sheets: create and edit spreadsheets (service account and folder setup required).",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/xing5/mcp-google-sheets",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/xing5/mcp-google-sheets",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-google-sheets",
+      "icon": "google-sheets",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "spreadsheets",
+          "description": "Create and edit Sheets using a Google Cloud service account and Drive folder."
+        }
+      ],
+      "about": "MCP integration for Google Sheets/Drive using service-account credentials and a target Drive folder.",
+      "vendorLabel": "Google Sheets"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-google-sheets\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-google-sheets@latest\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-google-sheets",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "SERVICE_ACCOUNT_PATH",
+          "description": "Path to Google Cloud service account JSON key file.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "DRIVE_FOLDER_ID",
+          "description": "Google Drive folder ID for spreadsheet access.",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "CREDENTIALS_CONFIG",
+          "description": "Optional inline credentials JSON instead of a file path.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

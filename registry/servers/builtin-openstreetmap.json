@@ -1,0 +1,50 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/osm-mcp-server",
+  "title": "OpenStreetMap",
+  "description": "Geocoding, POIs, routing, and place context from OpenStreetMap.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/jagan-shanmugam/open-streetmap-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/jagan-shanmugam/open-streetmap-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-openstreetmap",
+      "icon": "openstreetmap",
+      "iconBg": "#7EBC00",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "search / geocode",
+          "description": "Resolve addresses and free-text place queries to coordinates and OSM context."
+        },
+        {
+          "name": "routing",
+          "description": "Get routes and directions using OSM-derived street data."
+        },
+        {
+          "name": "poi",
+          "description": "Explore points of interest and nearby amenities."
+        }
+      ],
+      "about": "Brings OpenStreetMap-backed geospatial workflows to MCP: search places, reason about POIs, and obtain routing context without a proprietary maps API."
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-openstreetmap\": {\n      \"command\": \"uvx\",\n      \"args\": [\"osm-mcp-server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "osm-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

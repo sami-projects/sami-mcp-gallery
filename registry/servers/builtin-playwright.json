@@ -1,0 +1,55 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@playwright/mcp",
+  "title": "Playwright",
+  "description": "Browser automation via Playwright: control web pages using accessibility snapshots so the model does not rely on screenshots.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/microsoft/playwright-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/microsoft/playwright-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-playwright",
+      "icon": "playwright",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "browser_navigate",
+          "description": "Open pages and navigate browser tabs."
+        },
+        {
+          "name": "browser_click",
+          "description": "Click page elements through deterministic accessibility selectors."
+        },
+        {
+          "name": "browser_fill_form",
+          "description": "Fill multi-field forms in one action."
+        },
+        {
+          "name": "browser_snapshot",
+          "description": "Capture structured page state without screenshot-only reasoning."
+        }
+      ],
+      "about": "Playwright MCP exposes deterministic browser automation tools (navigation, interactions, snapshots, network state, tabs) for robust web tasks.",
+      "vendorLabel": "Microsoft Playwright"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-playwright\": {\n      \"command\": \"npx\",\n      \"args\": [\"@playwright/mcp@latest\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@playwright/mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

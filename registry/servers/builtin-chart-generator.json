@@ -1,0 +1,63 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@antv/mcp-server-chart",
+  "title": "Chart Generator",
+  "description": "Chart and diagram generation for dashboards and visual analysis (AntV-based).",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/antvis/mcp-server-chart",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/antvis/mcp-server-chart",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-chart-generator",
+      "icon": "antdesign",
+      "iconBg": "#1677FF",
+      "category": "Utilities",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "charts / diagrams",
+          "description": "Generate AntV-based charts and diagrams for dashboards and visual analysis."
+        }
+      ],
+      "about": "AntV MCP chart server for structured visualization generation with optional private Vis service and tool toggles.",
+      "vendorLabel": "AntV"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-chart-generator\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@antv/mcp-server-chart\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@antv/mcp-server-chart",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "VIS_REQUEST_SERVER",
+          "description": "Custom chart generation service URL for private deployment.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "SERVICE_ID",
+          "description": "Service identifier for chart generation records.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "DISABLED_TOOLS",
+          "description": "Comma-separated list of tool names to disable.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

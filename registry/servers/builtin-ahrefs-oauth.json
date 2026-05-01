@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-ahrefs-oauth",
+  "title": "Ahrefs",
+  "subtitle": "browser login",
+  "description": "SEO and competitor intelligence via Ahrefs APIs (keywords, backlinks, rankings, and site metrics).",
+  "version": "0.1.0",
+  "websiteUrl": "https://docs.ahrefs.com/docs/mcp/reference/introduction",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-ahrefs-oauth",
+      "icon": "ahrefs",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "keywords / backlinks / rankings",
+          "description": "Query SEO metrics, backlink profiles, keyword opportunities, and ranking intelligence from Ahrefs."
+        }
+      ],
+      "about": "Ahrefs hosted MCP for SEO research workflows including keyword, backlink, and site performance analysis.",
+      "vendorLabel": "Ahrefs"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-ahrefs-oauth\": {\n      \"url\": \"https://api.ahrefs.com/mcp/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.ahrefs.com/mcp/mcp"
+    }
+  ]
+}

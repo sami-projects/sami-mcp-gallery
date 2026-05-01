@@ -1,0 +1,71 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@notionhq/notion-mcp-server",
+  "title": "Notion",
+  "description": "Notion workspaces: pages, databases, wikis, and team content through the Notion API.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/makenotion/notion-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://developers.notion.com/docs/mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-notion",
+      "icon": "notion",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "query-data-source",
+          "description": "Query a data source (database) with filters and sorts (API 2025-09-03+)."
+        },
+        {
+          "name": "retrieve-a-page",
+          "description": "Read page content and properties."
+        },
+        {
+          "name": "search",
+          "description": "Search pages and data sources across the workspace."
+        },
+        {
+          "name": "move-page",
+          "description": "Move a page to another parent."
+        },
+        {
+          "name": "create-a-page",
+          "description": "Create pages under a parent page or database."
+        }
+      ]
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-notion\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@notionhq/notion-mcp-server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@notionhq/notion-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "NOTION_TOKEN",
+          "description": "Notion integration secret (ntn_…); create at notion.so/profile/integrations",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "OPENAPI_MCP_HEADERS",
+          "description": "Advanced: JSON headers instead of NOTION_TOKEN (Bearer + Notion-Version).",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

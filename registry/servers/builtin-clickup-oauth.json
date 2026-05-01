@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-clickup-oauth",
+  "title": "ClickUp",
+  "subtitle": "browser login",
+  "description": "Tasks, docs, time tracking, and workspaces in ClickUp.",
+  "version": "0.1.0",
+  "websiteUrl": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-clickup-oauth",
+      "icon": "clickup",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "tasks / docs / time tracking",
+          "description": "Use ClickUp MCP tools for workspace data, tasks, documents, and time-tracking workflows."
+        }
+      ],
+      "about": "ClickUp official hosted MCP endpoint for authenticated project and task management operations.",
+      "vendorLabel": "ClickUp"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-clickup-oauth\": {\n      \"url\": \"https://mcp.clickup.com/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.clickup.com/mcp"
+    }
+  ]
+}

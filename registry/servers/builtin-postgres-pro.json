@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/postgres-mcp",
+  "title": "PostgreSQL Pro",
+  "description": "PostgreSQL assistance for development: SQL authoring, introspection, and safe performance tuning.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/crystaldba/postgres-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/crystaldba/postgres-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-postgres-pro",
+      "icon": "postgres",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "sql authoring / introspection / tuning",
+          "description": "Assist Postgres development with schema introspection and performance-focused SQL workflows."
+        }
+      ],
+      "about": "postgres-mcp provides developer-focused Postgres tooling for schema exploration and SQL assistance.",
+      "vendorLabel": "postgres-mcp"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-postgres-pro\": {\n      \"command\": \"uvx\",\n      \"args\": [\n        \"postgres-mcp\",\n        \"--access-mode=unrestricted\"\n      ],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "postgres-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "DATABASE_URI",
+          "description": "Postgres database connection URI.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

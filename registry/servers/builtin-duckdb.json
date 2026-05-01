@@ -1,0 +1,59 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ktanaka101/mcp-server-duckdb",
+  "title": "DuckDB",
+  "description": "Execute SQL queries and analyze data in DuckDB databases.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/ktanaka101/mcp-server-duckdb",
+    "source": "github"
+  },
+  "websiteUrl": "https://duckdb.org/",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-duckdb",
+      "icon": "duckdb",
+      "iconBg": "#10B981",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "query",
+          "description": "Execute any SQL query on the DuckDB database. Supports SELECT for querying, CREATE/INSERT/UPDATE/DELETE for modifications (if not read-only), and other SQL operations. Input: query (string). Output: Results as text or success message."
+        }
+      ],
+      "about": "Enables AI agents to interact with DuckDB databases: execute SQL queries for data analysis, schema inspection, table creation, and other database operations through MCP tools. Ideal for local data processing, querying various file formats like CSV and Parquet, and integrating analytics into AI workflows.",
+      "vendorLabel": "DuckDB"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-duckdb\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-duckdb\", \"--db-path\", \"YOUR_DB_PATH\"]\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-server-duckdb",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "READ_ONLY",
+          "description": "Run server in read-only mode",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "false"
+        },
+        {
+          "name": "KEEP_CONNECTION",
+          "description": "Re-uses a single DuckDB connection for the entire server lifetime",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "false"
+        }
+      ]
+    }
+  ]
+}

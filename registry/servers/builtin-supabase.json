@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@supabase/mcp-server-supabase",
+  "title": "Supabase",
+  "description": "Supabase projects: SQL, migrations, schema, and project settings through your account.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://supabase.com",
+    "source": "github"
+  },
+  "websiteUrl": "https://supabase.com/blog/mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-supabase",
+      "icon": "supabase-brand",
+      "iconBg": "#3ECF8E",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "sql / migrations / project",
+          "description": "Operate on Supabase projects: SQL, schema, migrations, and dashboard-backed settings."
+        }
+      ],
+      "about": "Official Supabase MCP server for project and database administration using a personal access token.",
+      "vendorLabel": "Supabase"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-supabase\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@supabase/mcp-server-supabase@latest\", \"--access-token\", \"${personal-access-token}\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@supabase/mcp-server-supabase",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

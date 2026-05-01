@@ -1,0 +1,103 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.modelcontextprotocol/servers",
+  "title": "Filesystem",
+  "description": "Read, write, and manage local files and directories within user-configured allowed paths.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-filesystem",
+      "icon": "folder-open",
+      "iconBg": "#10B981",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "read_file",
+          "description": "Read the complete contents of a file as text (deprecated: use read_text_file)."
+        },
+        {
+          "name": "read_text_file",
+          "description": "Read the complete contents of a file as text, with options for head or tail."
+        },
+        {
+          "name": "read_media_file",
+          "description": "Read an image or audio file as base64 encoded data with MIME type."
+        },
+        {
+          "name": "read_multiple_files",
+          "description": "Read the contents of multiple files simultaneously."
+        },
+        {
+          "name": "write_file",
+          "description": "Create or overwrite a file with new text content."
+        },
+        {
+          "name": "edit_file",
+          "description": "Make line-based edits to a text file with replacements."
+        },
+        {
+          "name": "create_directory",
+          "description": "Create a new directory, including nested paths."
+        },
+        {
+          "name": "list_directory",
+          "description": "List all files and directories in a path with [FILE] and [DIR] prefixes."
+        },
+        {
+          "name": "list_directory_with_sizes",
+          "description": "List files and directories in a path, including sizes, sorted by name or size."
+        },
+        {
+          "name": "directory_tree",
+          "description": "Get a recursive JSON tree view of files and directories."
+        },
+        {
+          "name": "move_file",
+          "description": "Move or rename files and directories to a new location."
+        },
+        {
+          "name": "search_files",
+          "description": "Recursively search for files matching a glob pattern."
+        },
+        {
+          "name": "get_file_info",
+          "description": "Retrieve metadata like size, times, and permissions for a file or directory."
+        },
+        {
+          "name": "list_allowed_directories",
+          "description": "List the directories this server is allowed to access."
+        }
+      ],
+      "about": "Provides secure access to the local filesystem for AI agents: read and write files, manage directories, search content, and retrieve metadata — all confined to user-specified allowed directories.",
+      "vendorLabel": "Model Context Protocol"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-filesystem\", \"${allowed_directories}\"]\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@modelcontextprotocol/server-filesystem",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "allowed_directories",
+          "description": "Comma-separated list of allowed directories the server can access",
+          "isRequired": true,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

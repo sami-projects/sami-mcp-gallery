@@ -1,0 +1,63 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@modelcontextprotocol/server-google-maps",
+  "title": "Google Maps",
+  "description": "Location services, directions, and place details",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps",
+    "source": "github"
+  },
+  "websiteUrl": "https://developers.google.com/maps",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-google-maps",
+      "icon": "google-maps",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "maps_search_places",
+          "description": "Search places by text, optionally near a location and radius."
+        },
+        {
+          "name": "maps_place_details",
+          "description": "Get details for a place ID: address, ratings, contact info, and hours."
+        },
+        {
+          "name": "maps_directions",
+          "description": "Build routes between origin and destination with travel mode options."
+        },
+        {
+          "name": "maps_geocode",
+          "description": "Convert address to coordinates."
+        }
+      ],
+      "about": "Official MCP server for Google Maps APIs: geocoding, place search/details, directions, distance matrix, and elevation with one API key.",
+      "vendorLabel": "Google Maps Platform"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-google-maps\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-google-maps\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@modelcontextprotocol/server-google-maps",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "GOOGLE_MAPS_API_KEY",
+          "description": "Google Maps API key from Google Cloud Console.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

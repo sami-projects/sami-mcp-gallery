@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/open-meteo-mcp-lite",
+  "title": "Weather",
+  "description": "Lightweight weather forecasting server powered by Open-Meteo",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://www.npmjs.com/package/open-meteo-mcp-lite",
+    "source": "npm"
+  },
+  "websiteUrl": "https://www.npmjs.com/package/open-meteo-mcp-lite",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-weather",
+      "icon": "weather",
+      "iconBg": "#0EA5E9",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "forecast",
+          "description": "Retrieve weather forecasts and related conditions via Open-Meteo-backed tools."
+        }
+      ],
+      "about": "Lightweight MCP weather server for forecast queries without requiring heavyweight external integrations.",
+      "vendorLabel": "Open-Meteo"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-weather\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"open-meteo-mcp-lite\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "open-meteo-mcp-lite",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

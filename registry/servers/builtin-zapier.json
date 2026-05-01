@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "zapier/mcp",
+  "title": "Zapier",
+  "description": "Trigger actions across thousands of SaaS apps via Zapier.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/zapier/zapier-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/zapier/zapier-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-zapier",
+      "icon": "zapier",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "zaps / actions",
+          "description": "Orchestrate Zapier-connected apps and automation flows from MCP clients."
+        }
+      ],
+      "about": "Zapier MCP exposes automation building blocks so agents can trigger cross-app workflows with bearer authentication.",
+      "vendorLabel": "Zapier"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-zapier\": {\n      \"url\": \"https://mcp.zapier.com/api/v1/connect\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zapier.com/api/v1/connect"
+    }
+  ]
+}

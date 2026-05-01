@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/markitdown-mcp-npx",
+  "title": "MarkItDown",
+  "description": "Turn office documents, PDFs, images, and media into Markdown.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/xkiranj/markitdown-mcp-npx",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/xkiranj/markitdown-mcp-npx",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-markitdown",
+      "icon": "file-text",
+      "iconBg": "#4F46E5",
+      "category": "Utilities",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "convert",
+          "description": "Convert supported inputs (PDF, Office, images, audio, archives, etc.) to Markdown for agents."
+        }
+      ],
+      "about": "Wraps Microsoft MarkItDown-style conversion for MCP: one npx entrypoint suitable for turning heterogeneous files into LLM-friendly Markdown."
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-markitdown\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"markitdown-mcp-npx\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "markitdown-mcp-npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

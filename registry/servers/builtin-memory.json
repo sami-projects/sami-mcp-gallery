@@ -1,0 +1,62 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@modelcontextprotocol/server-memory",
+  "title": "Knowledge Graph Memory",
+  "description": "Persistent knowledge-graph memory: entities and relationships stored locally for context across sessions.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-memory",
+      "icon": "memory",
+      "iconBg": "#7C3AED",
+      "category": "Utilities",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "create_entities",
+          "description": "Add named entities to the in-memory knowledge graph."
+        },
+        {
+          "name": "create_relations",
+          "description": "Link entities with typed relationships."
+        },
+        {
+          "name": "read_graph",
+          "description": "Read the current graph state."
+        },
+        {
+          "name": "search_nodes",
+          "description": "Query nodes in the graph by name or other attributes."
+        }
+      ],
+      "about": "The reference MCP memory server stores a local entity–relation graph in a JSON file (path configurable) so sessions can build up structured long-term context."
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-memory\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-memory\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@modelcontextprotocol/server-memory",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "MEMORY_FILE_PATH",
+          "description": "Path to the memory storage file (default: memory.jsonl in the server directory; see upstream README).",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

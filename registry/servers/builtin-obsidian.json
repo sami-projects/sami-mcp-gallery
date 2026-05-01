@@ -1,0 +1,63 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-obsidian",
+  "title": "Obsidian",
+  "description": "Access and modify notes in Obsidian vaults via REST API",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/markuspfundstein/mcp-obsidian",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/markuspfundstein/mcp-obsidian",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-obsidian",
+      "icon": "obsidian",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "vault / notes",
+          "description": "Read and update Markdown notes in a vault exposed by the Obsidian Local REST API plugin."
+        }
+      ],
+      "about": "MCP bridge to Obsidian through the community REST API: point it at your vault host and API key.",
+      "vendorLabel": "Obsidian"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-obsidian\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-obsidian\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-obsidian",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "OBSIDIAN_API_KEY",
+          "description": "API key from the Obsidian Local REST API community plugin.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "OBSIDIAN_HOST",
+          "description": "Optional host override for the REST API.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "OBSIDIAN_PORT",
+          "description": "Optional port for the REST API.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

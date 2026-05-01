@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@modelcontextprotocol/server-puppeteer",
+  "title": "Puppeteer",
+  "description": "Navigate websites, fill forms, and capture screenshots programmatically",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers-archived/tree/HEAD/src/puppeteer",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers-archived/tree/HEAD/src/puppeteer",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-puppeteer",
+      "icon": "puppeteer",
+      "iconBg": "#40B5A4",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "navigate / screenshot / interaction",
+          "description": "Drive browser sessions to navigate pages, interact with elements, and capture page output."
+        }
+      ],
+      "about": "Browser automation MCP server based on Puppeteer for scripted navigation, form workflows, and reproducible visual captures.",
+      "vendorLabel": "Puppeteer"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-puppeteer\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-puppeteer\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@modelcontextprotocol/server-puppeteer",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

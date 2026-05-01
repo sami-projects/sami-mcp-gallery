@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-server-calculator",
+  "title": "Calculator",
+  "description": "Precise numerical calculations and expression evaluation.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/githejie/mcp-server-calculator",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/githejie/mcp-server-calculator",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-calculator",
+      "icon": "calculator",
+      "iconBg": "#2196F3",
+      "category": "Utilities",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "calculate",
+          "description": "Calculates/evaluates the given expression."
+        }
+      ],
+      "about": "Precise numerical calculations and expression evaluation. Enables AI agents to perform accurate math operations, handle complex expressions, and ensure precision in computational tasks."
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-calculator\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-calculator\"]\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-server-calculator",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

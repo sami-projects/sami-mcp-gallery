@@ -1,0 +1,33 @@
+name: Validate MCP Registry
+
+on:
+  pull_request:
+    paths:
+      - "registry/**"
+      - "scripts/**"
+      - "package.json"
+      - ".github/workflows/validate-registry.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "registry/**"
+      - "scripts/**"
+      - "package.json"
+      - ".github/workflows/validate-registry.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate registry
+        run: npm run validate:registry

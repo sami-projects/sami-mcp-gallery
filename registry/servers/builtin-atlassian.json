@@ -1,0 +1,85 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-atlassian",
+  "title": "Atlassian",
+  "description": "Confluence pages and Jira issues via the Atlassian Cloud API.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/sooperset/mcp-atlassian",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/sooperset/mcp-atlassian",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-atlassian",
+      "icon": "atlassian",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "jira",
+          "description": "Search and manage Jira issues and project data."
+        },
+        {
+          "name": "confluence",
+          "description": "Read and work with Confluence pages and spaces."
+        }
+      ],
+      "about": "Unified Atlassian MCP integration for Jira and Confluence in one server, authenticated with standard Cloud credentials.",
+      "vendorLabel": "Atlassian"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-atlassian\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-atlassian\"],\n      \"env\": {},\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-atlassian",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "JIRA_URL",
+          "description": "Jira Cloud URL (https://your-company.atlassian.net)",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "JIRA_USERNAME",
+          "description": "Jira account email",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "JIRA_API_TOKEN",
+          "description": "Jira API token",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "CONFLUENCE_URL",
+          "description": "Confluence URL (https://your-company.atlassian.net/wiki)",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "CONFLUENCE_USERNAME",
+          "description": "Confluence account email",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "CONFLUENCE_API_TOKEN",
+          "description": "Confluence API token",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

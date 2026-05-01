@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-server-reddit",
+  "title": "Reddit",
+  "description": "Reddit content via the API: posts, comments, and subreddit metadata.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/hawstein/mcp-server-reddit",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/hawstein/mcp-server-reddit",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-reddit",
+      "icon": "reddit",
+      "iconBg": "#FF4500",
+      "category": "Communication",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "posts / comments / subreddits",
+          "description": "Read subreddit metadata and retrieve posts and comments via Reddit API-backed tools."
+        }
+      ],
+      "about": "Reddit MCP integration for community intelligence and discussion analysis using programmatic subreddit and thread access.",
+      "vendorLabel": "Reddit"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-reddit\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-reddit\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-server-reddit",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

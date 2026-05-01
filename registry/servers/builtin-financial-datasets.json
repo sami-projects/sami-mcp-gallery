@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "financialdatasets/mcp",
+  "title": "Financial Datasets",
+  "subtitle": "browser login",
+  "description": "Stock and market data from the Financial Datasets service.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://www.financialdatasets.ai/",
+    "source": "website"
+  },
+  "websiteUrl": "https://www.financialdatasets.ai/",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-financial-datasets",
+      "icon": "financial-datasets",
+      "iconBg": "#0F766E",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "market_data / fundamentals",
+          "description": "Access stock and market datasets from the Financial Datasets service."
+        }
+      ],
+      "about": "Remote MCP endpoint that provides financial time series and market datasets for analysis workflows.",
+      "vendorLabel": "Financial Datasets"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-financial-datasets\": {\n      \"url\": \"https://mcp.financialdatasets.ai/\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.financialdatasets.ai/"
+    }
+  ]
+}

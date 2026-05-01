@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@neondatabase/mcp-server-neon",
+  "title": "Neon",
+  "description": "Neon serverless Postgres: branches, databases, SQL, and the Neon management API.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/neondatabase/mcp-server-neon",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/neondatabase/mcp-server-neon",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-neon",
+      "icon": "neon",
+      "iconBg": "#000000",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "branches / sql / management API",
+          "description": "Manage Neon projects, branches, databases, and run SQL via the Neon MCP server."
+        }
+      ],
+      "about": "Neon MCP connects agents to serverless Postgres with API-driven branching and project operations.",
+      "vendorLabel": "Neon"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-neon\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@neondatabase/mcp-server-neon\", \"start\", \"${user_config.neon_api_key}\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@neondatabase/mcp-server-neon",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

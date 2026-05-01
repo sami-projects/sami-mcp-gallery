@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-md-pdf",
+  "title": "Markdown to PDF",
+  "description": "Converts Markdown files into professional Word (.docx) and PDF documents — with full support for .dotx templates",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/sham-devs/mcp-md-pdf",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/sham-devs/mcp-md-pdf",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-markdown-to-pdf",
+      "icon": "file-text",
+      "iconBg": "#64748B",
+      "category": "Utilities",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "convert_markdown",
+          "description": "Convert a single Markdown file to DOCX, PDF, or both, with optional .dotx template."
+        },
+        {
+          "name": "convert_markdown_batch",
+          "description": "Batch-convert multiple Markdown files to DOCX/PDF outputs."
+        },
+        {
+          "name": "list_supported_formats",
+          "description": "Show supported input/output formats and conversion capabilities."
+        }
+      ],
+      "about": "MCP server focused on high-quality Markdown-to-DOCX/PDF workflows, including template-based styling (.dotx), single-file and batch conversion, and cross-platform output handling.",
+      "vendorLabel": "mcp-md-pdf"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-markdown-to-pdf\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-md-pdf\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-md-pdf",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

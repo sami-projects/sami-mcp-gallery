@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "git/needle-ai/needle-mcp",
+  "title": "Needle",
+  "description": "Hosted retrieval and knowledge connectors for AI workflows (Needle).",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/needle-ai/needle-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/needle-ai/needle-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-needle",
+      "icon": "needle",
+      "iconBg": "#7FAEFA",
+      "category": "Data",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "connectors / retrieval",
+          "description": "Use Needle-hosted retrieval and knowledge connectors with an API key."
+        }
+      ],
+      "about": "Needle MCP wires agents to managed retrieval and connector workflows over stdio (installed from the upstream Git repository via uvx).",
+      "vendorLabel": "Needle"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-needle\": {\n      \"command\": \"uvx\",\n      \"args\": [\n        \"--from\",\n        \"git+https://github.com/needle-ai/needle-mcp\",\n        \"needle-mcp\"\n      ],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "needle-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "NEEDLE_API_KEY",
+          "description": "API key for the Needle service.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

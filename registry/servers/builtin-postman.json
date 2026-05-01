@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@postman/postman-mcp-server",
+  "title": "Postman",
+  "description": "API development in Postman: collections, testing, documentation, and environments.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/postmanlabs/postman-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/postmanlabs/postman-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-postman",
+      "icon": "postman",
+      "iconBg": "#FF6C37",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "collections / environments",
+          "description": "Work with Postman collections, environments, and API workflows through MCP."
+        }
+      ],
+      "about": "Official Postman MCP server for API lifecycle tasks tied to your Postman account.",
+      "vendorLabel": "Postman"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-postman\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@postman/postman-mcp-server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@postman/postman-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "POSTMAN_API_KEY",
+          "description": "Postman API key from your Postman account.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

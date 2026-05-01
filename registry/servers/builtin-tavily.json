@@ -1,0 +1,63 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/tavily-mcp",
+  "title": "Tavily Search",
+  "description": "Web search with optional page extraction via Tavily.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/tavily-ai/tavily-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/tavily-ai/tavily-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-tavily",
+      "icon": "tavily",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "tavily-search",
+          "description": "Real-time web search using the Tavily API."
+        },
+        {
+          "name": "tavily-extract",
+          "description": "Extract structured data from a web page by URL."
+        },
+        {
+          "name": "tavily-map",
+          "description": "Map and summarize site structure for a given domain or URL."
+        },
+        {
+          "name": "tavily-crawl",
+          "description": "Crawl multiple pages and collect content in one pass."
+        }
+      ],
+      "about": "Tavily MCP brings Tavily search, extraction, and crawl APIs into the Model Context Protocol so agents can look up the web, pull page content, and build research workflows with one API key.",
+      "vendorLabel": "Tavily"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-tavily\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"tavily-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "tavily-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "TAVILY_API_KEY",
+          "description": "API key for Tavily services (dashboard or docs.tavily.com).",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

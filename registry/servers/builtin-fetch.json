@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-server-fetch",
+  "title": "Fetch",
+  "subtitle": "May reach internal networks — assess trust and exposure.",
+  "description": "Retrieve and process web content, converting HTML to markdown for LLM consumption.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-fetch",
+      "icon": "mcp-fetch",
+      "iconBg": "#E8EAEF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "fetch",
+          "description": "Fetch a URL and return content as markdown (optional max_length, start_index, raw)."
+        },
+        {
+          "name": "robots_txt",
+          "description": "By default obeys robots.txt for model-initiated requests; override or proxy behavior per upstream server README."
+        }
+      ]
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-fetch\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-fetch\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-server-fetch",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

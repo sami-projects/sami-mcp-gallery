@@ -1,0 +1,47 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.nickclyde/duckduckgo-mcp-server",
+  "title": "DuckDuckGo Search",
+  "description": "Web search and lightweight page retrieval via DuckDuckGo.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/nickclyde/duckduckgo-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://duckduckgo.com",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-duckduckgo",
+      "icon": "duckduckgo",
+      "iconBg": "#FFFFFF",
+      "category": "Web",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "search",
+          "description": "Search the web using DuckDuckGo. Returns a list of results with titles, URLs, and snippets."
+        },
+        {
+          "name": "fetch_content",
+          "description": "Fetch and extract the main text content from a webpage. Strips out navigation, headers, footers, scripts, and styles to return clean readable text."
+        }
+      ],
+      "about": "Provides web search capabilities through DuckDuckGo, with additional features for content fetching and parsing.",
+      "vendorLabel": "DuckDuckGo"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-duckduckgo\": {\n      \"command\": \"uvx\",\n      \"args\": [\"duckduckgo-mcp-server\"]\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "duckduckgo-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

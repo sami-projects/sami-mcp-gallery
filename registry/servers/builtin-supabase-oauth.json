@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-supabase-oauth",
+  "title": "Supabase",
+  "subtitle": "browser login",
+  "description": "Supabase projects: SQL, migrations, schema, and project settings through your account.",
+  "version": "0.1.0",
+  "websiteUrl": "https://supabase.com/blog/mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-supabase-oauth",
+      "icon": "supabase-brand",
+      "iconBg": "#3ECF8E",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "sql / migrations / schema / project settings",
+          "description": "Use Supabase-hosted OAuth MCP for project-level database and admin workflows."
+        }
+      ],
+      "about": "Supabase hosted MCP endpoint with browser authentication for project and database operations.",
+      "vendorLabel": "Supabase"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-supabase-oauth\": {\n      \"url\": \"https://mcp.supabase.com/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.supabase.com/mcp"
+    }
+  ]
+}

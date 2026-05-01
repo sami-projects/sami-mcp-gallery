@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/telegram-bot-mcp-server",
+  "title": "Telegram Bot",
+  "description": "Telegram bots: outbound messages and updates via the Bot API.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/siavashdelkhosh81/telegram-bot-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/siavashdelkhosh81/telegram-bot-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-telegram-bot",
+      "icon": "telegram",
+      "iconBg": "#26A5E4",
+      "category": "Communication",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "bot_messages / updates",
+          "description": "Send outbound bot messages and handle incoming updates via Telegram Bot API."
+        }
+      ],
+      "about": "Telegram Bot MCP connector for operational chat workflows through a standard BotFather token.",
+      "vendorLabel": "Telegram"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-telegram-bot\": {\n      \"command\": \"npx\",\n      \"args\": [\"telegram-bot-mcp-server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "telegram-bot-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "TELEGRAM_BOT_API_TOKEN",
+          "description": "Telegram bot token from @BotFather.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

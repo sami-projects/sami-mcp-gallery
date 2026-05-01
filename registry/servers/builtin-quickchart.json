@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@gongrzhe/quickchart-mcp-server",
+  "title": "QuickChart",
+  "description": "Chart and graph images from data using QuickChart.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/GongRzhe/Quickchart-MCP-Server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/GongRzhe/Quickchart-MCP-Server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-quickchart",
+      "icon": "quickchart",
+      "iconBg": "#CDD0DB",
+      "category": "Utilities",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "charts",
+          "description": "Generate chart and graph images from structured data via QuickChart-backed tools."
+        }
+      ],
+      "about": "MCP wrapper for QuickChart-style rendering so agents can produce chart images from tabular or JSON inputs."
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-quickchart\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@gongrzhe/quickchart-mcp-server\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@gongrzhe/quickchart-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

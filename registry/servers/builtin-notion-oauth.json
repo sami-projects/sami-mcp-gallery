@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-notion-oauth",
+  "title": "Notion",
+  "subtitle": "browser login",
+  "description": "Notion workspaces: pages, databases, wikis, and team content through the Notion API.",
+  "version": "0.1.0",
+  "websiteUrl": "https://www.notion.so",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-notion-oauth",
+      "icon": "notion",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "pages / databases / workspace content",
+          "description": "Access Notion workspace content via the official hosted OAuth MCP endpoint."
+        }
+      ],
+      "about": "Notion hosted MCP endpoint for authenticated workspace operations with pages, databases, and related team content.",
+      "vendorLabel": "Notion"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-notion-oauth\": {\n      \"url\": \"https://mcp.notion.com/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.notion.com/mcp"
+    }
+  ]
+}

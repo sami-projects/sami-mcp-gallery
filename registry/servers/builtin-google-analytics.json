@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/analytics-mcp",
+  "title": "Google Analytics",
+  "description": "Google Analytics reporting: traffic, behavior, conversions, and property configuration.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/googleanalytics/google-analytics-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/googleanalytics/google-analytics-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-google-analytics",
+      "icon": "google",
+      "iconBg": "#FFFFFF",
+      "category": "Analytics",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "traffic / behavior / conversions",
+          "description": "Access Google Analytics reporting and property insights for marketing and product analysis workflows."
+        }
+      ],
+      "about": "Google Analytics MCP integration for querying core reports and related GA property data.",
+      "vendorLabel": "Google Analytics"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-google-analytics\": {\n      \"command\": \"pipx\",\n      \"args\": [\"run\", \"analytics-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "analytics-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "pipx",
+      "environmentVariables": [
+        {
+          "name": "GOOGLE_APPLICATION_CREDENTIALS",
+          "description": "Path to Google service account credentials JSON.",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "GOOGLE_PROJECT_ID",
+          "description": "Google Cloud project ID for the credentials.",
+          "isRequired": true,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

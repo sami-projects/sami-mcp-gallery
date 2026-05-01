@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/n8n-mcp",
+  "title": "n8n",
+  "description": "Workflow automation: trigger and monitor runs, manage credentials, and wire integrations through n8n.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/czlonkowski/n8n-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/czlonkowski/n8n-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-n8n",
+      "icon": "n8n",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "workflows",
+          "description": "Trigger workflow runs, inspect executions, and manage automation context in n8n."
+        }
+      ],
+      "about": "n8n MCP bridges agent actions to your automation workspace so assistants can orchestrate and monitor workflow-based operations.",
+      "vendorLabel": "n8n"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-n8n\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"n8n-mcp\"],\n      \"env\": {\n        \"MCP_MODE\": \"stdio\",\n        \"LOG_LEVEL\": \"error\",\n        \"DISABLE_CONSOLE_OUTPUT\": \"true\"\n      },\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "n8n-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "N8N_API_URL",
+          "description": "Base URL of your n8n API endpoint.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "N8N_API_KEY",
+          "description": "n8n API key for authenticated access.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

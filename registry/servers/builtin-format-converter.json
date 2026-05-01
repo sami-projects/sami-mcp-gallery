@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-pandoc",
+  "title": "File Format Converter",
+  "description": "Convert documents between formats using Pandoc (PDF, HTML, Markdown, DOCX, RST, EPUB, LaTeX, CSV, and more).",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/vivekVells/mcp-pandoc",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/vivekVells/mcp-pandoc",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-format-converter",
+      "icon": "file-text",
+      "iconBg": "#64748B",
+      "category": "Utilities",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "convert-contents",
+          "description": "Convert document contents or files between supported formats, with optional output path and reference doc."
+        }
+      ],
+      "about": "Pandoc-based MCP conversion server: transform content or files across common documentation formats with options for defaults files, filters, and template-style reference documents.",
+      "vendorLabel": "mcp-pandoc"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-format-converter\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-pandoc\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-pandoc",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

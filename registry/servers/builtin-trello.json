@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@delorenj/mcp-server-trello",
+  "title": "Trello",
+  "description": "Trello boards, lists, and cards for tasks and projects.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/delorenj/mcp-server-trello",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/delorenj/mcp-server-trello",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-trello",
+      "icon": "trello",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "boards / lists / cards",
+          "description": "Manage Trello boards, lists, and cards for project and task workflows."
+        }
+      ],
+      "about": "Trello MCP server exposes board structures and card operations so agents can update shared task workflows.",
+      "vendorLabel": "Trello"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-trello\": {\n      \"command\": \"npx\",\n      \"args\": [\"@delorenj/mcp-server-trello\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@delorenj/mcp-server-trello",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "TRELLO_API_KEY",
+          "description": "Trello API key.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "TRELLO_TOKEN",
+          "description": "Trello API token.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

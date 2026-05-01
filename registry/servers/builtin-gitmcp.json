@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.gitmcp/docs",
+  "title": "GitMCP",
+  "description": "Fetch and search documentation and source from public GitHub repositories.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/idosal/git-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://gitmcp.io",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-gitmcp",
+      "icon": "github",
+      "iconBg": "#FFFFFF",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "search_generic_documentation",
+          "description": "Search documentation content from connected GitHub docs and repositories."
+        },
+        {
+          "name": "fetch_generic_documentation",
+          "description": "Fetch full documentation pages and source snippets by URL."
+        }
+      ],
+      "about": "GitMCP exposes public GitHub documentation and source context through MCP, helping agents search and fetch referenced docs without cloning repositories locally.",
+      "vendorLabel": "GitMCP"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-gitmcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"mcp-remote\", \"https://gitmcp.io/docs\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://gitmcp.io/docs"
+    }
+  ]
+}

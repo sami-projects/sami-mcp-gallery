@@ -1,0 +1,46 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/mcp-server-time",
+  "title": "Time",
+  "description": "Current time and timezone conversion (IANA), with automatic system timezone detection",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-time",
+      "icon": "clock",
+      "iconBg": "#0EA5E9",
+      "category": "Utilities",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "get_current_time",
+          "description": "Return the current time for a given IANA timezone (or the configured default)."
+        },
+        {
+          "name": "convert_time",
+          "description": "Convert a time from one IANA timezone to another."
+        }
+      ],
+      "about": "Official MCP time utilities: get “now” and convert between IANA timezones, so agents can reason about deadlines and user-local times without hand-rolled date math."
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-time\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-time\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "mcp-server-time",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

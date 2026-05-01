@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "pypi/awslabs.aws-documentation-mcp-server",
+  "title": "AWS Documentation",
+  "description": "Access AWS documentation, search, and get recommendations.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/awslabs/mcp/tree/HEAD/src/aws-documentation-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/awslabs/mcp/tree/HEAD/src/aws-documentation-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-aws-documentation",
+      "icon": "aws",
+      "iconBg": "#FFFFFF",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "aws_docs_search / recommendations",
+          "description": "Search AWS docs content and retrieve relevant service guidance."
+        }
+      ],
+      "about": "AWS Labs MCP server focused on documentation retrieval so agents can ground answers in official AWS references.",
+      "vendorLabel": "Amazon Web Services"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-aws-documentation\": {\n      \"command\": \"uvx\",\n      \"args\": [\"awslabs.aws-documentation-mcp-server@latest\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "awslabs.aws-documentation-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx",
+      "environmentVariables": [
+        {
+          "name": "FASTMCP_LOG_LEVEL",
+          "description": "Optional server log level.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "AWS_DOCUMENTATION_PARTITION",
+          "description": "Optional docs partition override.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

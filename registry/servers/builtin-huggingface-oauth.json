@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-huggingface-oauth",
+  "title": "Hugging Face",
+  "subtitle": "browser login",
+  "description": "Explore the Hugging Face Hub: models, datasets, Spaces, and papers.",
+  "version": "0.1.0",
+  "websiteUrl": "https://huggingface.co/docs/hub/agents-mcp",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-huggingface-oauth",
+      "icon": "huggingface",
+      "iconBg": "#FFFFFF",
+      "category": "Development",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "models / datasets / spaces",
+          "description": "Browse and work with Hub resources such as models, datasets, Spaces, and papers."
+        }
+      ],
+      "about": "Hosted Hugging Face MCP endpoint with browser login for searching and inspecting Hub assets.",
+      "vendorLabel": "Hugging Face"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-huggingface-oauth\": {\n      \"url\": \"https://huggingface.co/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://huggingface.co/mcp"
+    }
+  ]
+}

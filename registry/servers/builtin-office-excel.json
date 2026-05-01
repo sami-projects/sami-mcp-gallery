@@ -1,0 +1,135 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.npm/excel-mcp-server",
+  "title": "Office Excel",
+  "description": "Read and edit Excel (.xlsx) workbooks without Microsoft Excel installed.",
+  "version": "0.1.0",
+  "websiteUrl": "https://excelmcpserver.com",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-office-excel",
+      "icon": "excel",
+      "iconBg": "#fff",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "apply_formula",
+          "description": "Apply Excel formula to cell with verification."
+        },
+        {
+          "name": "validate_formula_syntax",
+          "description": "Validate Excel formula syntax without applying it."
+        },
+        {
+          "name": "format_range",
+          "description": "Apply formatting to a range of cells."
+        },
+        {
+          "name": "read_data_from_excel",
+          "description": "Read data from Excel worksheet with cell metadata and validation rules."
+        },
+        {
+          "name": "write_data_to_excel",
+          "description": "Write data to Excel worksheet."
+        },
+        {
+          "name": "create_workbook",
+          "description": "Create new Excel workbook."
+        },
+        {
+          "name": "create_worksheet",
+          "description": "Create new worksheet in workbook."
+        },
+        {
+          "name": "create_chart",
+          "description": "Create chart in worksheet."
+        },
+        {
+          "name": "create_pivot_table",
+          "description": "Create pivot table in worksheet."
+        },
+        {
+          "name": "create_table",
+          "description": "Creates a native Excel table from a specified range of data."
+        },
+        {
+          "name": "copy_worksheet",
+          "description": "Copy worksheet within workbook."
+        },
+        {
+          "name": "delete_worksheet",
+          "description": "Delete worksheet from workbook."
+        },
+        {
+          "name": "rename_worksheet",
+          "description": "Rename worksheet in workbook."
+        },
+        {
+          "name": "get_workbook_metadata",
+          "description": "Get metadata about workbook including sheets, ranges, etc."
+        },
+        {
+          "name": "merge_cells",
+          "description": "Merge a range of cells."
+        },
+        {
+          "name": "unmerge_cells",
+          "description": "Unmerge a range of cells."
+        },
+        {
+          "name": "get_merged_cells",
+          "description": "Get merged cells in a worksheet."
+        },
+        {
+          "name": "copy_range",
+          "description": "Copy a range of cells to another location."
+        },
+        {
+          "name": "delete_range",
+          "description": "Delete a range of cells and shift remaining cells."
+        },
+        {
+          "name": "validate_excel_range",
+          "description": "Validate if a range exists and is properly formatted."
+        },
+        {
+          "name": "get_data_validation_info",
+          "description": "Get all data validation rules in a worksheet."
+        },
+        {
+          "name": "insert_rows",
+          "description": "Insert one or more rows starting at the specified row."
+        },
+        {
+          "name": "insert_columns",
+          "description": "Insert one or more columns starting at the specified column."
+        },
+        {
+          "name": "delete_sheet_rows",
+          "description": "Delete one or more rows starting at the specified row."
+        },
+        {
+          "name": "delete_sheet_columns",
+          "description": "Delete one or more columns starting at the specified column."
+        }
+      ],
+      "about": "Read and edit Excel (.xlsx) workbooks without Microsoft Excel: worksheets, formulas, formatting, charts, pivot tables, and tables.",
+      "vendorLabel": "Excel MCP Server"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-office-excel\": {\n      \"command\": \"uvx\",\n      \"args\": [\"excel-mcp-server\", \"stdio\"]\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "excel-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

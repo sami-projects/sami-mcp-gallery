@@ -1,0 +1,59 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@thirdstrandstudio/mcp-figma",
+  "title": "Figma",
+  "description": "Figma design files: layouts, comments, components, libraries, and team collaboration.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/thirdstrandstudio/mcp-figma",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/thirdstrandstudio/mcp-figma",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-figma",
+      "icon": "figma",
+      "iconBg": "#FFFFFF",
+      "category": "Productivity",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "figma_get_file",
+          "description": "Fetch a Figma file by file key, including node tree and metadata."
+        },
+        {
+          "name": "figma_get_file_nodes",
+          "description": "Load specific nodes (frames, components) from a file key."
+        },
+        {
+          "name": "figma_get_images",
+          "description": "Export or render image URLs for nodes in a file."
+        },
+        {
+          "name": "figma_get_comments",
+          "description": "Read file comments, optionally as Markdown."
+        },
+        {
+          "name": "figma_get_team_components",
+          "description": "List team components and libraries for reuse."
+        }
+      ],
+      "about": "Wraps the Figma REST API as MCP tools: files, images, components, comments, team projects, webhooks, and library analytics, authenticated with a personal access token in Sami.",
+      "vendorLabel": "Third Strand Studio"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-figma\": {\n      \"command\": \"npx\",\n      \"args\": [\"@thirdstrandstudio/mcp-figma\", \"--figma-token\", \"${figma_api_access_token}\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@thirdstrandstudio/mcp-figma",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

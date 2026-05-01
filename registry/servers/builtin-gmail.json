@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/@gongrzhe/server-gmail-autoauth-mcp",
+  "title": "Gmail",
+  "description": "Gmail: compose, read, search, and manage messages and threads.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/GongRzhe/Gmail-MCP-Server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/GongRzhe/Gmail-MCP-Server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-gmail",
+      "icon": "gmail",
+      "iconBg": "#FFFFFF",
+      "category": "Communication",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "messages / threads",
+          "description": "Compose, read, search, and manage Gmail messages and threads."
+        }
+      ],
+      "about": "Gmail MCP integration focused on mail workflows for agents; supports composing and organizing messages in connected accounts.",
+      "vendorLabel": "Gmail"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-gmail\": {\n      \"command\": \"npx\",\n      \"args\": [\"@gongrzhe/server-gmail-autoauth-mcp\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@gongrzhe/server-gmail-autoauth-mcp",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx"
+    }
+  ]
+}

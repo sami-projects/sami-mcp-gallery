@@ -1,0 +1,43 @@
+{
+  "name": "@sami-projects/mcp-gallery",
+  "version": "0.1.0",
+  "description": "Public MCP server metadata gallery for Sami (canonical server.json + Sami UI extensions)",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sami",
+    "catalog",
+    "registry",
+    "gallery"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sami-projects/sami-mcp-gallery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sami-projects/sami-mcp-gallery/issues"
+  },
+  "homepage": "https://github.com/sami-projects/sami-mcp-gallery#readme",
+  "files": [
+    "registry",
+    "assets",
+    "README.md",
+    "LICENSE",
+    "scripts/validate-registry.mjs",
+    "scripts/publish-mcp-to-web-content.cjs",
+    "scripts/publish-mcp-web-content-release.cjs"
+  ],
+  "scripts": {
+    "validate:registry": "node scripts/validate-registry.mjs",
+    "publish:web-content-mcp": "node scripts/publish-mcp-to-web-content.cjs",
+    "publish:web-content-mcp:release": "node scripts/publish-mcp-web-content-release.cjs",
+    "prepublishOnly": "npm run validate:registry"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

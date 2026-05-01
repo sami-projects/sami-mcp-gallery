@@ -1,0 +1,86 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.roychri/mcp-server-asana",
+  "title": "Asana",
+  "description": "Tasks, projects, and teamwork in Asana.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/roychri/mcp-server-asana",
+    "source": "github"
+  },
+  "websiteUrl": "https://developers.asana.com/docs",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@roychri/mcp-server-asana",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "ASANA_ACCESS_TOKEN",
+          "description": "Personal access token from the Asana developer console.",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "READ_ONLY_MODE",
+          "description": "Set to true to disable write operations.",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "false"
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-asana",
+      "icon": "asana",
+      "iconBg": "#2D92DB",
+      "category": "Productivity",
+      "maintained": "community",
+      "toolsSummary": [
+        {
+          "name": "asana_list_workspaces",
+          "description": "List all available Asana workspaces."
+        },
+        {
+          "name": "asana_search_projects",
+          "description": "Search for projects using name matching."
+        },
+        {
+          "name": "asana_search_tasks",
+          "description": "Search tasks with workspace-level filters."
+        },
+        {
+          "name": "asana_get_task",
+          "description": "Get detailed information for a specific task."
+        },
+        {
+          "name": "asana_create_task",
+          "description": "Create a new task in a project."
+        },
+        {
+          "name": "asana_update_task",
+          "description": "Update an existing task."
+        },
+        {
+          "name": "asana_get_project",
+          "description": "Get detailed project information."
+        },
+        {
+          "name": "asana_get_tasks_for_project",
+          "description": "List tasks for a specific project."
+        }
+      ],
+      "about": "Integrates with Asana to enable task automation, project tracking, and team collaboration through the Asana API. Allows AI agents to list workspaces, search and manage tasks, projects, tags, sections, and more via MCP tools.",
+      "vendorLabel": "Asana Developer Platform"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"asana\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@roychri/mcp-server-asana\"]\n    }\n  }\n}"
+    }
+  }
+}

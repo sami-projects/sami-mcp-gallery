@@ -1,0 +1,71 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "npm/mongodb-mcp-server",
+  "title": "MongoDB",
+  "description": "Query and explore MongoDB in read-only mode: databases, collections, schema inspection, and Atlas-compatible connections.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://github.com/mongodb-js/mongodb-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-mongodb",
+      "icon": "mongodb",
+      "iconBg": "#001E2B",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "find / aggregate",
+          "description": "Query collections with filters, projections, and aggregation pipelines (read-only deployment)."
+        },
+        {
+          "name": "schema",
+          "description": "Inspect databases, collections, and inferred document shapes."
+        },
+        {
+          "name": "connect",
+          "description": "Use a connection string (including Atlas) with optional TLS material via environment variables."
+        }
+      ],
+      "about": "Official MongoDB MCP server for exploring data and metadata with a read-only default; connects via standard URI and supports TLS options through env vars.",
+      "vendorLabel": "MongoDB"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-mongodb\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mongodb-mcp-server@latest\", \"--readOnly\"],\n      \"type\": \"stdio\"\n    }\n  }\n}"
+    }
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "mongodb-mcp-server",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "npx",
+      "environmentVariables": [
+        {
+          "name": "MDB_MCP_CONNECTION_STRING",
+          "description": "MongoDB connection string (e.g. mongodb://user:pass@host:27017)",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "MDB_MCP_TLS_CERTIFICATE_KEY_FILE",
+          "description": "Optional path to client TLS key file.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "MDB_MCP_TLS_CERTIFICATE_CA_FILE",
+          "description": "Optional path to CA bundle for TLS verification.",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}

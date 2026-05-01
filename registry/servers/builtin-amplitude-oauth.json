@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-amplitude-oauth",
+  "title": "Amplitude",
+  "subtitle": "browser login",
+  "description": "Product analytics and experimentation in Amplitude.",
+  "version": "0.1.0",
+  "websiteUrl": "https://app.amplitude.com/",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-amplitude-oauth",
+      "icon": "amplitude",
+      "iconBg": "#FFFFFF",
+      "category": "Analytics",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "events / funnels / experiments",
+          "description": "Access Amplitude analytics workflows for event analysis, funnel insights, and experiment reporting."
+        }
+      ],
+      "about": "Hosted Amplitude MCP endpoint to inspect product analytics data and experimentation outcomes.",
+      "vendorLabel": "Amplitude"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-amplitude-oauth\": {\n      \"url\": \"https://mcp.amplitude.com/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.amplitude.com/mcp"
+    }
+  ]
+}

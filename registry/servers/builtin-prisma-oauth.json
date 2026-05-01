@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-prisma-oauth",
+  "title": "Prisma",
+  "subtitle": "browser login",
+  "description": "Prisma Postgres: migrations, backups, SQL, connection strings, and lifecycle for dev and production.",
+  "version": "0.1.0",
+  "websiteUrl": "https://www.prisma.io",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-prisma-oauth",
+      "icon": "prisma",
+      "iconBg": "#FFFFFF",
+      "category": "Data",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "migrations / backups / sql / lifecycle",
+          "description": "Manage Prisma Postgres workflows over the hosted OAuth endpoint."
+        }
+      ],
+      "about": "Prisma hosted MCP endpoint for Prisma Postgres lifecycle operations, migrations, and SQL workflows.",
+      "vendorLabel": "Prisma"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-prisma-oauth\": {\n      \"url\": \"https://mcp.prisma.io/mcp\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.prisma.io/mcp"
+    }
+  ]
+}

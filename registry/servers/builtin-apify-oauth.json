@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.sami/builtin-apify-oauth",
+  "title": "Apify",
+  "subtitle": "browser login",
+  "description": "Hosted scrapers and browser automation on the Apify platform.",
+  "version": "0.1.0",
+  "websiteUrl": "https://github.com/apify/apify-mcp-server",
+  "_meta": {
+    "io.sami/gallery": {
+      "legacyId": "builtin-apify-oauth",
+      "icon": "apify",
+      "iconBg": "#EFF2FF",
+      "category": "Web",
+      "maintained": "vendor",
+      "toolsSummary": [
+        {
+          "name": "scrapers / automation",
+          "description": "Run hosted scraping and browser automation workflows using Apify's remote MCP endpoint."
+        }
+      ],
+      "about": "Apify hosted MCP server for web data extraction and automation jobs without local runtime setup.",
+      "vendorLabel": "Apify"
+    },
+    "io.sami/install": {
+      "configSnippet": "{\n  \"mcpServers\": {\n    \"builtin-apify-oauth\": {\n      \"url\": \"https://mcp.apify.com\",\n      \"type\": \"http-stream\"\n    }\n  }\n}"
+    }
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com"
+    }
+  ]
+}
