@@ -1,6 +1,6 @@
 {
   "name": "@sami-projects/mcp-gallery",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Public MCP server metadata gallery for Sami (canonical server.json + Sami UI extensions)",
   "license": "MIT",
   "keywords": [
